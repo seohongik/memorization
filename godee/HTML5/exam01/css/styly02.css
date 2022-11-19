@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+/*공통*/
+*{margin: 0; padding: 0;}
+li{list-style-type: none;}
+a{text-decoration: none;}
+img{vertical-align: top;}
+
+
+/*header*/
+
+
+
+
+#header{
+    background-color: #2f2f2f;
+    width: 100%;
+    height: 150px;
+  
+    
+    
+}
+
+#header >#headerWrap{
+    background-color: #2f2f2f;
+    margin: 0 auto ;
+    width: 880px;
+    height: 150px;
+    position: relative;
+    
+    
+   
+     
+}
+
+#header >#headerWrap >#logo{
+    background-color: #2f2f2f;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top :35px; left: 0px;
+    
+
+    
+
+}
+
+#header > #headerWrap > #menu{
+    background-color: #2f2f2f;
+    width: 439px;
+    height: 150px;
+    position: absolute;
+    right: 0; top: 75px;
+   
+}
+
+/* main*/
+#main {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 300px;
+    
+}
+    
+#main >#mainWrap{
+        
+        margin: 0 auto ;
+        width: 880px;
+        height: 300px;
+        background-color: #f1f1f1;
+        position: relative;
+}
+#main #mainWrap #main{
+    
+    width: 400px;
+    height: 300px;
+    
+    
+    
+}
+#main #mainWrap #main .main01{
+    background-color: white;
+    width: 321px;
+    height: 35px;
+    position: absolute;
+    left: 0px; top: 30px; 
+
+}
+
+#main #mainWrap #main .main02{
+    
+    width: 355px;
+    height: 132px;
+    position: absolute;
+    left: 0px; top: 75px; 
+
+}
+
+
+#main #mainWrap #main .btn01{
+    
+    width: 236px;
+    height: 31px;
+    position: absolute;
+    left: 0px; bottom: 50px; 
+
+}
+
+#main #mainWrap #main .main03{
+    position: absolute;
+    right: 0px; top:30px;
+
+}
+
+/*content*/
+
+
+#content {
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    
+}
+    
+#content >#contentWrap{
+        
+        margin: 0 auto ;
+        width: 880px;
+        height: 500px;
+        background-color: white;
+        
+       
+       
+}
+#content #contentWrap .content01{
+        width: 200px;
+        height: 36px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        
+        
+}
+#content #contentWrap .contentBox01{
+        width: 280px;
+        height: 200px;
+        margin-bottom: 20px;
+}
+
+#content #contentWrap .caption{
+    width: 280px;
+    height: 28px;
+    margin-bottom: 20px;
+}
+
+#content #contentWrap .con03{
+    width: 280px;
+    height: 54px;
+    margin-bottom: 30px;
+
+}
+
+#content #contentWrap .btn02{
+
+    width: 236px;
+    height: 31px;
+    margin-top: 25px;
+}
+
+.content01{
+    background-color: white;
+    width: 254px;
+    height: auto;
+}
+
+#contentWrap .copy1{
+    float: left;
+    
+}
+#contentWrap .copy2{
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#contentWrap .copy3{
+    float: left;
+}
+
+/*footer*/
+
+
+#footer{
+    background-color: #2f2f2f;
+    width: 100%;
+    height: 278px;
+   
+    
+    
+    
+}
+
+
+#footer > #footerWrap{
+    
+    margin: 0 auto ;
+    width: 880px;
+    height: 278px;
+   
+    
+    
+}
+
+#footerWrap > #fLeft{
+
+    width: 300px;
+    height: 267px;
+    float: left;
+}
+#footer .post img{
+    width: 116px;
+    height: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.footer01 img{
+    width: 267px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.footer02 img{
+    width: 267px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.footer03 img{
+    width: 267px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+#footerWrap > #fCenter {
+    width: 365px;
+    height: 220px;
+  
+    float: left;
+    margin-top: 20px ;
+
+
+}
+
+#footerWrap > .about{
+    width: 116px;
+    height: 24px;
+    
+}
+
+#footerWrap > .footer02{
+    width: 116px;
+    height: 24px;
+    margin: 10px 0px;
+}
+
+#fRight {
+    
+    width: 200px;
+    height: 278px;
+    float: left;
+
+}
+
+.r2 img{
+   margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.r3 img{
+    margin-bottom: 20px;
+
+}
+
+.r4 img{
+    margin-bottom: 20px;
+}
+
+.r5{
+    margin-bottom: 20px;
+}
+
+.r6{
+    margin-bottom: 20px;
+}
+

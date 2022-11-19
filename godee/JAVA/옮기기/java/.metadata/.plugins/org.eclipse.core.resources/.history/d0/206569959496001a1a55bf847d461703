@@ -1,0 +1,27 @@
+class Drink {
+	String name;
+	int price;
+	int count;
+	
+	Drink(String n, int p, int c) {
+		name=n;
+		price=p;
+		count=c;
+	}
+	
+	int getTotalPrice() {
+		return count*price;
+	}
+	
+	static void printTitle() {
+		System.out.println("상품명\t\t단가\t수량\t금액");
+	}
+}
+public class Payment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

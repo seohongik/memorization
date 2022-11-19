@@ -1,0 +1,23 @@
+package sec01;
+
+public class Sample01 {
+
+	public static void main(String[] args) {		
+		// TODO Auto-generated method stub
+		//String str="Hello";
+		
+		String str= new String("Hello");
+		
+		char ch1 = str.charAt(0);//charAT 쓰는법
+		System.out.println(ch1);
+		
+		char ch2 =str.charAt(1);
+		System.out.println(ch2);
+		
+		
+		int len =str.length();//length 매소드로 사용할수 있음
+		System.out.println(len);
+
+	}
+
+}

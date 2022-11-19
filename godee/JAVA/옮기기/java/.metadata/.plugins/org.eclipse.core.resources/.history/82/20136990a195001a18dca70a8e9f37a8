@@ -1,0 +1,19 @@
+
+public class CalcMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+	
+	static String concatenate(String str1, String str2) {
+		String result="";
+		return result;
+	}
+	
+	static String varConcatenate(String ...strings) {
+		String result="";
+		return result;
+	}
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>action 속성 변경하기</title>
+    <script>
+
+        function goLoginPage() {
+
+            var userName = document.getElementsByName("txtName")[0].value;
+            // console.log(userName);
+
+            var theForm = document.frmSubmit;
+            theForm.method = "get";
+            theForm.action = "./07.html";    
+            // alert("나불렀음?");
+          
+            if(userName!="") 
+            theForm.submit();
+        }
+    </script>
+</head>
+<body>
+
+    <form name="frmSubmit">
+        <input type="text" name="txtName">
+        <input type="button" name="btnName" value="가입완료" onclick="goLoginPage();">
+    </form>
+
+</body>
+</html>

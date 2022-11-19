@@ -1,0 +1,60 @@
+package daliyTest;
+
+class Man{
+	
+	int age;
+	
+	String name;
+	
+	boolean isMarried;
+	
+	int childNumber;
+	
+	//나이 알아내기
+	int getManAge(){
+		
+		
+		return age;
+	}
+	
+	//이름알아내기
+	
+	String getManName() {
+		
+		
+		return name;
+	}
+	
+
+	//결혼유무알아내기
+	
+	boolean isMarried() {
+		
+		
+		return isMarried;
+	}
+	
+	
+	void setMan(int age) {
+		
+		
+		
+		
+	}
+	
+}
+
+	
+
+
+
+public class Person {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Man man= new Man();
+		
+	}
+
+}

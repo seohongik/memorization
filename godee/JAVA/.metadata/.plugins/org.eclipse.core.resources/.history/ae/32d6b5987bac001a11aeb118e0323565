@@ -1,0 +1,29 @@
+//클래스 이름이 FunctionTest입니다.
+public class FunctionTest {
+
+	//main 메서드가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*메서드이름 add
+		매개변수 num,num2 ->int 형
+	 	반환형 : int형입니다.
+	 	반환값 :result입니다.
+	 	기능 : 두개의 정수 num1과 num2를 더한 결과를 result에 대입하여 반홥합니다.*/
+		
+		// 메서드에 전의하는 부분
+		
+		public static int add(int num1, int num2){
+			//결과값을 저장하기 위함 변수
+			int result=0;
+			
+			//두개의 정수를 더한 결과를 result 변수에 대입합니다.
+			result=num1 +num2;
+			
+			//두개의 정수를 더한 결과를 반환하기 위하여 return 다음에 result 변수를 작성합니다.
+			return result;	
+			
+		}
+	}
+
+}

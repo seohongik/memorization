@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-28</title>
+    <script>
+        /* 조건문 실습(4) */
+        /*
+        학점을 구하기 예제입니다.
+        하나의 평균 값을 입력받아 요구사항에 맞게 출력해주세요.
+        요구사항
+        1. 학점은 다음과 같이 계산해주세요.
+        입력 값이 100~90 이면 A학점
+        입력 값이 89~80 이면 B학점
+        입력 값이 79~70 이면 C학점
+        입력 값이 69~60 이면 D학점
+        입력 값이 59~ 이면 F학점
+        2. 예를 들어 입력 값이 100이면 다음과 같이 출력해주세요.
+        100 점수의 점수의 학점은? A학점 입니다.
+        [예시]
+        입력값 : 100 (엔터)
+        출력값 : "100점의 학점은? A 입니다"
+        */
+
+        var score = window.prompt("점수를 입력해주세요.");
+        score = parseInt(score);
+
+        // if( score >= 0 && score <= 59 ) {
+        //     document.write( score + "점의 학점은? F입니다.");
+        // }
+        // else if ( score >= 60 && score <= 69 ){
+        //     document.write( score + "점의 학점은? D입니다.");
+        // } 
+        // else if ( score >= 70 && score <= 79 ){
+        //     document.write( score + "점의 학점은? C입니다.");
+        // } 
+        // else if ( score >= 80 && score <= 89 ){
+        //     document.write( score + "점의 학점은? B입니다.");
+        // } 
+        // else if ( score >= 90 && score <= 100 ){
+        //     document.write( score + "점의 학점은? A입니다.");
+        // } 
+        // else {
+        //     document.write("점수를 다시 입력해주세요.(0~100)");
+        // }
+
+        /*
+        if( score >= 0 && score <= 59) {
+            document.write( score + "점의 학점은? F입니다.");
+        }
+        if ( score >= 60 && score <= 69 ){
+            document.write( score + "점의 학점은? D입니다.");
+        } 
+        if ( score >= 70 && score <= 79 ){
+            document.write( score + "점의 학점은? C입니다.");
+        } 
+        if ( score >= 80 && score <= 89 ){
+            document.write( score + "점의 학점은? B입니다.");
+        } 
+        if ( score >= 90 && score <= 100 ){
+            document.write( score + "점의 학점은? A입니다.");
+        } 
+        if ( !(score >= 0 && score <= 100) ){ 
+            document.write("점수를 다시 입력해주세요.(0~100)");
+        }
+        */
+
+        if( score >= 0 && score <= 100 ) {
+            if( score <= 59 ) {
+            document.write( score + "점의 학점은? F입니다.");
+            }
+            else if ( score <= 69 ){
+                document.write( score + "점의 학점은? D입니다.");
+            } 
+            else if ( score <= 79 ){
+                document.write( score + "점의 학점은? C입니다.");
+            } 
+            else if ( score <= 89 ){
+                document.write( score + "점의 학점은? B입니다.");
+            } 
+            else if ( score <= 100 ){
+                document.write( score + "점의 학점은? A입니다.");
+            } 
+        }
+        else {
+            document.write("점수를 다시 입력해주세요.(0~100)");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

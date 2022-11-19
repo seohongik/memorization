@@ -1,0 +1,56 @@
+//패키지 이름이 scheduler입니다.
+package scheduler;
+
+import java.io.IOException;
+
+//클래스 이름이 SchedulerTest입니다.
+public class SchedulerTest {
+
+//	main()가 생성되었습니다.
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		//출력문을 호출합니다. 
+		
+		System.out.println("전화 상담 할당 방식을 선택하시오");
+		System.out.println("R : 한명씩 차례로 할당합니다.");
+		System.out.println("L : 쉬고있거나 대기가 높은 가장 적은 상담원에게 할당합니다.");
+		System.out.println("P :우선 순위가 높은 고객 먼저 할당합니다.");
+		
+		//할당 방식을 입력받아 ch 변수에 대입합니다. 
+		
+		int ch=System.in.read(); 
+		
+		Scheduler scheduler=null;
+		
+		
+		
+		if(ch=='R'|| ch=='r') {
+			//입력받은 값이 R또는 r이면 RoundRobin클래스를 생성합니다.
+			scheduler=new RoundRobin();
+	
+		}else if(ch=='L'||ch=='l') {
+			//입력받은 값이 L또는 l이면 LeastJob클래스를 생성합니다.
+			scheduler=new LeastJob();
+					
+		}else if(ch=='P'|| ch=='p') {
+			//입력받은 값이 P또는 p이면  PriorityAllocation클래스를 생성합니다.
+			scheduler=new PriorityAllocation();
+			
+		}else {
+			System.out.println("지원 되지 않은 형식입니다.");	
+			return;
+		
+			
+		}
+		//어떤 정책인지와 상관없이 인터페이스에 선언한 메서드를 호출합니다. 
+		scheduler.getNextCall();
+		scheduler.sendCallToAgent();
+		
+		
+		
+		
+		
+	}
+
+}

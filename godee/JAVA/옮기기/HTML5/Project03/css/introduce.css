@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* 각 소개페이지로 넘어가는 버튼입니다. */
+
+#introduceList {
+    width: 300px;
+    height: 40px;
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+#introduceList li {
+    width: 40px;
+    height: 40px;
+    float: left;
+    border-radius: 50%;
+    margin-left: 15px;
+    background-color: #eeeeee;
+    line-height: 40px;
+}
+
+article#introduceMainArticle {
+    width: 1050px;
+    height: 500px;
+    margin: 0 auto 30px;
+    /* background-color: gray; */
+    box-sizing: border-box;
+}
+
+#introduceImgBox {
+    width: 500px;
+    height: 500px;
+    float: left;
+    box-sizing: border-box;
+    border: 1px dotted gray;
+    line-height: 500px; /*내용이 들어가면 삭제합니다.*/
+
+}
+
+#introduceTextBox {
+    width: 500px;
+    height: 500px;
+    float: right;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    line-height: 500px; /*내용이 들어가면 삭제합니다.*/
+    
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터 -15</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+         
+    </style>
+
+    <script>
+       $(document).ready(function(){
+            $("#selectBtn").click(function(){
+        var list="<span>";
+        $("input[name='hobby']:checkbox:checked").each(function(){  
+            list+=$(this).prev().text()+"&nbsp";
+            list+="<span>"
+            $("#contents").html(list);//text와 다르다.
+
+        });
+        var list='<span>';
+       
+            $("input:checkbox").each(function(){
+                if(this.checked)
+                    list+=$(this).prev().text()+"&nbsp";
+                list+='</span>';
+                $('#contents').html(list);
+            });
+         
+         });
+         //$는 객체를 의미
+         $('#contents').text('');
+         $("input:checkbox").each(function(){
+             if(this.checkbox)
+                $('#contents').append((this).prev().text()+'&nbsp;');
+
+        });
+    });
+    
+       
+
+    </script>
+</head>
+<body>
+    <div>
+        <span class="item">음악감상</span>
+        <input type="checkbox" name="hobby" value="music">
+    </div>
+    <div>
+        <span class="item">영화감상</span>
+        <input type="checkbox" name="hobby" value="movie">
+    </div>
+    <div>
+        <span class="item">프로그램 개발</span>
+        <input type="checkbox" name="hobby" value="codding">
+    </div>
+    <div>
+        <input type="button" id="selectBtn" value="취미선택">
+    </div>
+    <div id="contents">결과</div>
+</body>
+</html>

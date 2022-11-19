@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체-2</title>
+    <script>
+        var line = ["사당", "교대", "방배", "강남"];
+        document.write(line,"<br>");
+        // console.log(line);
+
+        document.write(typeof line,"<br>");              // typeof 객체의 타입을 알려줌 
+        document.write(line.join("-"),"<br>");           // 요소의 값 사이를 "-"으로 변경 기본값은 ","
+        document.write(typeof line.join("-"),"<br>");    // join을 걸면 객체에서 string으로 타입이 변환
+        document.write(line.reverse(),"<br>");           // reverse() : 배열을 거꾸로 출력
+        document.write(line.sort());                     // sort() : 오름차순
+        //  내림차순은? 찾아보거나 구현해보자
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

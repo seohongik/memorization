@@ -1,0 +1,44 @@
+
+//패키지이름이 dailyTest입니다.
+package dailyTest;
+
+
+
+//클래스 이름이 MyDateTest입니다.
+public class MyDeteTest {
+
+	//main() 메서드가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		//데일리 테스트 문제 
+		MyDate date1=new MyDate(30,2,2020);
+		System.out.println(date1.isVaild());//유효하지 않은 날짜입니다.
+		
+		MyDate date2= new MyDate(17,6,2020);
+		
+		//System.out.println(date2.isVaild());//유효한 날짜입니다.
+		
+		//date 라는 객체를 생성합니다.
+		//date 객체의 필드(멤버변수)를 public에서 private로 변경하므로 오류가 발생합니다.
+		/*
+		 
+		The field MyDate.month is not visible
+		The field MyDate.day is not visible
+		The field MyDate.year is not visible
+		*/
+		
+		
+		/*
+		MyDate date = new MyDate();
+		
+		date.month=2;
+		
+		date.day=30;
+		
+		date.year=2020;
+		*/
+	}
+
+}

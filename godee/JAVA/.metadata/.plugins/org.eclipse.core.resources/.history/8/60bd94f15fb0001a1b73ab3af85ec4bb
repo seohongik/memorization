@@ -1,0 +1,55 @@
+//패키지 이름이 birthdayTest입니다.
+package birthdayTest;
+
+
+//Birthday라는 클래스를 정의합니다.
+
+
+//클래스 앞에 public을 붙이면 The public type BirthDay must be defined in its own file 오류가 발생합니다.
+//접근 제한자가 public 인 경우 클래스 이름과 자바파일 이름이 같아야 합니다. (main)메서드가 존재하는 클래스의 경우에만
+
+
+class BirthDay{
+	
+	//필드(멤버변수)를 정의합니다.
+	
+	int day;	//일
+	int month;	//월
+	int year;  	//년도
+	
+	//BirthDay 클래스의 년도(year)를 부여하는 메서드를 정의합니다.
+	public void setYear(int year) {
+		year = year;
+	}
+	
+	//this 예약어를 출력하는 메서드를 정의합니다.
+	
+	public void printThis() {
+		
+		System.out.println(year);
+	}
+	
+}
+//클래스 이름이 BirthdayTest 입니다.
+public class BirthdayTest {
+
+	//main() 메서드가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//birthDay객체를 생성합니다.
+		
+		BirthDay birthDay= new BirthDay();
+		
+		//태너난 연도를 2020으로 지정합니다.
+		birthDay.setYear(2020);
+		//참조 변수(birthDay 객체)를 출력합니다.
+		System.out.println(birthDay);
+		//this 예약어를 출력하는 printThis() 메서드를 호출합니다.
+		birthDay.printThis();
+	
+		
+		
+	}
+
+}

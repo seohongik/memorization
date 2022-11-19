@@ -1,0 +1,16 @@
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int J = 0;
+		int i = 0;
+		for(i = 0; i<=100;++i) {
+			J += i;
+		}
+		System.out.println(J);
+		System.out.println(i);
+	}
+
+}

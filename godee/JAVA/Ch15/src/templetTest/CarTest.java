@@ -1,0 +1,22 @@
+//package이름이 templetTest입니다.
+package templetTest;
+//CarTest 클래스가 정의되었습니다.
+public class CarTest {
+
+//	main()메소드가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//AI자동차 생성
+		Car myCar=new AICar();
+		myCar.run();
+		
+		//Manual 자동차를 생성합니다.
+		
+		Car yourCar=new ManualCar();
+		yourCar.run();
+		
+
+	}
+
+}

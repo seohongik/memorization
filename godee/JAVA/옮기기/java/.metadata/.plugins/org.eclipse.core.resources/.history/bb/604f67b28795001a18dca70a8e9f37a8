@@ -1,0 +1,17 @@
+class Card {
+	String kind;
+	int num;
+	
+	static int width = 100;
+	static int height = 250;
+}
+
+public class CardTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(Card.width);
+		System.out.println(Card.height);
+	}
+
+}

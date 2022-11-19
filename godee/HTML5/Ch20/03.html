@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line-height 속성을 이용한 행간지정</title>
+    <style type="text/css">
+        body{ font-size: 12px;}
+        h1 {
+            background-color: silver;
+            color: white;
+        }
+        div{ line-height: 1.6;}
+    </style>
+</head>
+<body>
+    <h1>행간 지정하기</h1>
+    <div>
+        <p>문단의 행강을 지정할 경우 line-height속성을 사용합니다. 이때 line-height값을 font-size 보다 작게 지정하면 글자가 겹칠 수 있으므로 font-siz보다 크게 지정해 주는 것이 좋습니다.  </p>
+        <P class="line">line-heigh에 값을 입력할 때는 실수로 입력하는 것이 바람직합니다. 1, 4, 1.6과 같이 실수로 행간의 크기를 지정하면 자식 요소의 글자 크기가 부모 요소와 다를 경우 지정값이 상속되기 때문입니다.</P>
+      </div>
+</body>
+</html>

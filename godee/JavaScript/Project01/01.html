@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- id는 유일하기 때문에 배열사용 X -->
+    <title>id값 가져오기</title>
+    <script>
+        function check_name(){
+            var result = document.getElementById("userName").value;
+            console.log(result);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="userName">
+    <!-- 함수 호출 후에 세미콜론(;) 기입 -->
+    <button onclick="check_name();">중복 확인</button>
+
+</body>
+</html>

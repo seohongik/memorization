@@ -1,0 +1,175 @@
+ch33
+
+---------------
+
+html5의 새로운 태그 (시멘틱 웹 태그)
+
+html의 구조를 보다 논리적으로 만들어주는 html5의 새로운 태그들
+
+header : 문서의 헤더부분의 구조를 나타내는 태그 
+
+nav:문서의 네비게이션 구조를 나타내는 태그 
+
+figure : 문서의 멀티미디어 요소를 나타내는 태그 
+
+section: 특정 콘첸츠들을 그룹화 시켜주는 태그 
+
+article : 작은 의미 단위의 컨텐츠를 나타내는 태그 
+
+aside : 문서의 사이드 컨텐츠 본문과는 다른 서브 컨텐트를 나타내는 태그 
+
+footer : 문서의 푸터 부분의 구조를 나타내는 태그 
+
+-----------------
+
+<video> 태그 
+
+외부 플러그인 없이 순수 웹표준 기술만으로 동영상 콘텐츠를 삽입 가능 합니다. 
+
+<video>
+	<source src="동영상 파일 경로" type="동영상 파일 타입">
+</video>
+
+video 태그 속성
+
+src: 비디오 파일의 경로 지정
+
+post : 비디오 준비중일때 표시할 이미지의 파일 경로 지정
+
+
+preload : 비디오를 재생하기 전에 데이터를 모두 불어올지 여부 지정
+
+autoplay : 비디오의 자동 재생 여부 지정
+
+loop: 비디오의 반복 재생 여부 지정
+
+controls : 비디오 재생 도구의 출력 여부 지정
+
+width 비디오의 너비 지정
+
+height 비디오의 높일 지정
+
+---------------
+
+nth- child()
+
+원하는 순서 값에 해당하는 태그를 선택하는 css 선택자
+
+태그명(요소명): nth-child(순서값) {css 속성: 값;}
+-------------
+
+text-shadow, box-shadow
+
+글자와 박스에 그림자를 생성하는 속성
+
+text-shadow : 가로축거리 세로축거리 퍼짐도 색상;
+
+box-shadow : 가로축거리 세로축거리 퍼짐도 색상;
+
+
+------------
+border-radius 속성
+
+사각형의 모서리를 둥글게 만드는 속성
+
+
+border-radius :왼쪽위 오른쪽위 오른쪽아래 왼쪽아래 
+
+
+
+
+----------
+back-ground gradiant
+
+
+
+----------
+
+
+*background-size속성
+
+
+배경 이미지의 크기 조절하기
+
+background -size : 너비값  높이값
+
+*background-size: cover; 
+
+background-size: cotain;
+
+일반적으로 "풀 스크린(Full Screen)"환경에서의 배경이미지
+사이즈는 background-siz:cover;를 주로 사용
+---------
+
+***box-sizing 속성
+
+블록 요소 너비와 높이값 안에 paddding과 border값을 포합시킵니다
+
+box-sizing : border-box;
+
+***********box-sizing : border-box 속성은 너비값과 높이값이 %단위일 때 ,padding과 border값을 고정 
+px로 설정해야할 경우 특히 유용
+
+
+-----------
+Ch34 
+--------
+tranform(2d변형)
+
+특정 요소 모양을 평면상에서 자유롭게 변형합니다. 
+
+translate : x축이나 y축으로 이동시키는 것 
+
+x축으로 이동 : transform : translateX( x 이동거리);
+y축으로 이동 : transform : translateY( y 이동거리);
+X,Y축으로 이동 : transform : translate( x 이동거리, y 이동거리);
+
+*translate 는 해당 요소의 원래 위치값을 기준점으로 삼아서 이동합니다. 
+
+-----------
+
+
+skew속성 : X축이나 Y축으로 기울임
+
+
+X축으로 기울이기 : transform : skewX(각도);
+
+Y축으로 기울이기 : transform : skewY(각도);
+
+X Y축으로 기울이기 : transform : skew(x축 각도 , y축 각도);
+
+각도를 나타내는 단위는 degree의 약자인 deg입니다. 
+
+-----------
+
+scale 속성 : x축이나 y축으로 확대/축소
+
+x축으로 확대/축소 : transform : scaleX(x축 비율);
+
+
+y축으로 확대/축소 : transform : scaleY(y축 비율);
+
+x,y축으로 확대/축소 : transform : scale(x축비율 y축비율);
+
+*scale의 비율은 원본크기 1을 기준으로 1보다 크면 확대 1보다 작으면 축소됩니다. 비율값은 소수점 이하로도 설정할 수 있습니다.
+
+------------
+
+
+rotate : 평면상에서의 회전
+
+transform : rotate(회전각도)
+
+회전값이 플러스 값일 때에는 시계방향 
+마이너스 값일 때에는 반시계방향으로 회전합니다. 
+
+-----------
+transform-origin 속성 
+
+해당 요소의 모양을 변형 시 변형의 기준점 변경 
+방향 설정 transform-origin  : left top;
+고정 px 설정 transform-origin  : 20px 30px;
+퍼센트 설정 : transform-origin  : 0% 100%
+
+*transform-origin의 수치중 첫번째는 가로 기준점 두번째는 세로 기준점 이다
+각각의 수치 사이에는 콤마를 집어넣지 않는 점을 주의하세요 

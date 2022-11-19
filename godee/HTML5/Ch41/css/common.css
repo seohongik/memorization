@@ -1,0 +1,32 @@
+/*reset*/
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none; outline: none;}
+img{vertical-align: top; border: 0;}
+
+
+
+img[src*=png]{
+    
+
+    
+    
+}
+
+img[src*=jpg]{
+    display: inline-block;
+    margin: 20px auto;
+
+}
+
+
+li{
+    display: inline-block;
+    text-align: center;
+    line-height: 2,0;
+}
+
+
+

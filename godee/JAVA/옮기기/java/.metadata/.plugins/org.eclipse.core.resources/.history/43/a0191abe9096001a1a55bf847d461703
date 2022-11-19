@@ -1,0 +1,27 @@
+class Animal {
+	String name;
+	int age;
+	
+	public void cry() {
+		System.out.println("生生生生生生生生生");
+	}
+}
+
+class Cat extends Animal{
+	String place;
+
+	public void cry() {
+		System.out.println("醤醤針");
+	}
+	
+}
+
+public class AloneTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Cat cat1 = new Cat();
+	}
+
+}

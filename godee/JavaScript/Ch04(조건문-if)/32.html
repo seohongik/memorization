@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-32</title>
+    <script>
+        /* 
+        
+        */
+        var num1 = window.prompt("첫번째 숫자 값을 입력하세요");
+        var op = window.prompt("사칙연산 중 하나를 입력하세요.","(+,-,*,/)");
+        var num2 = window.prompt("두번째 숫자 값을 입력하세요.");
+        var result;
+        var ok = true; // 지원되는 연산자는 true, 그렇지 않으면 false;
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+
+        switch(op) {
+            case "+" :
+                result = num1 + num2;
+                break;
+            case "-" :
+                result = num1 - num2;
+                break;
+            case "*" :
+                result = num1 * num2;
+                break;    
+            case "/" :
+                result = num1 / num2;
+                break;
+            default : 
+                document.write("지원되지 않는 연산자입니다.");
+                ok = false;
+        }
+        if(ok)
+            document.write(num1 + op + num2 + "=" + result);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

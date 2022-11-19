@@ -1,0 +1,18 @@
+
+public class CalcMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(concatenate("100","200"););
+	}
+	
+	static String concatenate(String str1, String str2) {
+
+			String result="";
+			result=str1+str2;
+			return result;
+		
+	}
+
+}

@@ -1,0 +1,49 @@
+package sec03;
+
+class Car{
+	
+	private int num;
+	private double gas;
+	
+	public void show() {
+		System.out.println("차량 번호는"+num+"입니다.");
+		System.out.println("연료량은"+gas+"입니다.");
+	}
+	//메소드 오버로딩!!(인수값: 타입이 다르거나 개수가 다르거나 [메서드는 같다 return값(x)])
+	// void 반환값
+	//생성자는 필드를 초기화 하는 목적으로 사용(다음예제)
+	public void setCar(int num) {
+		
+		this.num=num;
+		System.out.println("차량 번호를 "+this.num+"으로 바꾸었습니다.");
+	}
+	
+	public void setCar(double gas) {
+		this.gas=gas;
+		System.out.println("연료량을"+this.gas+"으로 바꾸었습니다.");
+		
+	}
+	public void setCar(int num,double gas) {
+		this.num=num;
+		this.gas=gas;
+		
+		System.out.println("차량 번호는"+this.num+"으로, 연료량을"+this.gas+"로 바꾸었습니다.");
+	
+	}
+}
+
+
+public class Sample03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Car car1 =new Car();
+		car1.show();
+		car1.setCar(100);//타입을 보고 결정
+		car1.show();
+		car1.setCar(12.345);
+		car1.show();
+	}
+
+}

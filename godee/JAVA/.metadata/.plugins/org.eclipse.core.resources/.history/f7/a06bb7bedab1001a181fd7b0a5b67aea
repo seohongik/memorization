@@ -1,0 +1,25 @@
+//페키지 이름이 singletonTest 입니다.
+package singletonTest;
+
+//Company class 정의 합니다.
+public class Company {
+	
+	//클래스 내부에 static으로 유일한 인스턴스를 생성하시오
+	private static Company instance = new Company();
+	
+	
+	//private 생성자를 생성합니다.
+	private Company() {}
+		
+	
+	//외부에서 참조할 수 있는 public 메서드를 생성하시오
+	public static Company getInstance() {
+		
+		if(instance== null) {
+			instance =new Company();
+		}
+		
+		return instance;//유일하게 생성한 인스턴스를 반환합니다.
+	}
+	
+}

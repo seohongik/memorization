@@ -1,0 +1,27 @@
+--------
+ch40
+------
+
+idex.html
+css3.htm
+javascript.html
+---------------------------------------
+common.css  -> 공통적으로 사용할 css
+main.css  -> index.html에서 사용할 css
+css3.css   -> css3.html에서 사용할 css
+javascript.css ->  javascript.html에서 사용할 css
+
+-----
+ch41
+--------
+
+
+
+index.html
+
+css/common.css : reset (초기화 구문)
+
+
+css/ main.css
+
+images/이미지들....

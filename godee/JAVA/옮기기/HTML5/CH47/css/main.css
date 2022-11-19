@@ -1,0 +1,318 @@
+@media screen and (min-width:1024px) {
+
+    div#wrap {
+        width:976px;
+        margin: 30px auto 0;
+        border: 1px solid #ccc;
+    }
+
+    header {
+        width:976px;
+        background-repeat:no-repeat;
+        text-align:center;
+        position:relative;
+    }
+
+    header > p#headerName {
+        position:absolute;
+        font-size: 30px;
+        color:yellow;
+        top:30px; left:20px;
+        font-weight:700;
+    }
+
+    header > div#headerLogo {
+        width:976px; height:283px;
+        background-image:url(../images/bg.png);
+    }
+
+    header > ul#headerMenu {
+        background-color:rgb(190, 44, 44);
+        width:100%; height:50px;
+    }
+
+    ul#headerMenu > li {float: left;}
+
+    ul#headerMenu li a {
+        display:block;
+        width:120px;
+        height:100%;
+        line-height:50px;
+        color:white;
+        font-size:14px;
+    }
+
+    div#content {
+        height:500px;
+        overflow:hidden;
+    }
+
+    div#content > section#main {
+        width:77%; height:500px;
+        box-sizing:border-box;
+        padding: 10px;
+        float:left;
+    }
+
+    section#main > h2 {
+        font-size: 18px;
+        margin-bottom:20px;
+    }
+    section#main > h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    section#main > p {
+        font-size: 12px;
+    }
+
+
+    div#content > #aside {
+        width:23%; height:500px;
+        padding:10px;
+        box-sizing:border-box;
+        background-color: #eee;
+        float:right;
+    }
+
+    div.image {
+        width:200px; height:112px;
+        margin:0 auto 5px;
+    }
+ 
+    footer {
+        width: 976px; height: 105px;
+        background-color: #444;
+        text-align:center;
+        padding: 10px;
+        box-sizing:border-box;
+    }
+
+    footer > p.first_text {
+        color: white;
+        margin: 10px 0;
+    }
+
+    footer > p.second_text {
+        color:white;
+        margin: 20px 0;
+    }
+}
+
+
+
+
+
+@media screen and (min-width:640px) and (max-width:1023px){
+    div#wrap {
+        width:630px;
+        margin: 30px auto 0;
+        border: 1px solid #ccc;
+    }
+
+    header {
+        width:630px;
+        background-repeat:no-repeat;
+        text-align:center;
+        position:relative;
+    }
+
+    header > p#headerName {
+        position:absolute;
+        font-size: 30px;
+        color:yellow;
+        top:30px; left:20px;
+        font-weight:700;
+    }
+
+    header > div#headerLogo {
+        width:630px; height:243px;
+        background-image:url(../images/bg.png);
+        background-position: center center;
+    }
+
+    header > ul#headerMenu {
+        background-color:rgb(190, 44, 44);
+        width:100%; height:50px;
+        text-align:center;
+    }
+
+    ul#headerMenu > li {
+        display:inline-block;
+        padding:0 30px;
+    }
+
+    ul#headerMenu > li > a {
+        display:block;
+        width:100%;
+        height:50px;
+        line-height:50px;
+        color:white;
+        font-size:14px;
+    }
+
+    div#content {
+        height:500px;
+        overflow:hidden;
+    }
+
+    div#content > section#main {
+        width:630px; height:72%;
+        box-sizing:border-box;
+        padding: 10px;
+    }
+
+    section#main > h2 {
+        font-size: 18px;
+        margin-bottom:20px;
+    }
+    section#main > h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    section#main > p {
+        font-size: 12px;
+    }
+
+
+    div#content > #aside {
+        width:630px; height:28%;
+        padding:14px 12px;
+        box-sizing:border-box;
+        background-color: #eee;
+    }
+
+    div.image {
+        width:200px; height:112px;
+        margin:0 auto 5px;
+        float:left;
+        margin:0 1px;
+        
+    }
+ 
+    footer {
+        width: 630px; height: 105px;
+        background-color: #444;
+        text-align:center;
+        padding: 10px;
+        box-sizing:border-box;
+    }
+
+    footer > p.first_text {
+        color: white;
+        margin: 10px 0;
+    }
+
+    footer > p.second_text {
+        color:white;
+        margin: 20px 0;
+    }
+}
+
+
+@media screen and (max-width:639px) {
+    div#wrap {
+        width:400px;
+        margin: 30px auto 0;
+        border: 1px solid #ccc;
+    }
+
+    header {
+        width:400px;
+        background-repeat:no-repeat;
+        text-align:center;
+        position:relative;
+    }
+
+    header > p#headerName {
+        position:absolute;
+        font-size: 30px;
+        color:yellow;
+        top:30px; left:20px;
+        font-weight:700;
+    }
+
+    header > div#headerLogo {
+        width:400px; height:213px;
+        background-image:url(../images/bg.png);
+        background-position: center top;
+    }
+
+    header > ul#headerMenu {
+        background-color:rgb(190, 44, 44);
+        width:400px; height:160px;
+    }
+
+    ul#headerMenu > li {
+        margin: 0 30px;
+    }
+
+    ul#headerMenu > li > a {
+        height:40px;
+        line-height:40px;
+        color:white;
+        font-size:14px;
+    }
+
+    div#content {
+        overflow:hidden;
+    }
+
+    div#content > section#main {
+        width:400px;
+        box-sizing:border-box;
+        padding: 10px;
+    }
+
+    section#main > h2 {
+        font-size: 18px;
+        margin-bottom:20px;
+    }
+    section#main > h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    section#main > p {
+        font-size: 12px;
+    }
+
+
+    div#content > #aside {
+        width:400px;
+        padding:14px 12px;
+        box-sizing:border-box;
+        background-color: #eee;
+    }
+
+    div.image {
+        width:100%; height:200px;
+        margin:0 auto 5px;
+        margin:0 1px;
+        box-sizing:border-box;
+        padding:5px;
+        
+    }
+
+    img.aside_feature {
+        width:366px; height:190px;
+    }
+ 
+    footer {
+        width: 400px; height: 105px;
+        background-color: #444;
+        text-align:center;
+        padding: 10px;
+        box-sizing:border-box;
+    }
+
+    footer > p.first_text {
+        color: white;
+        margin: 10px 0;
+    }
+
+    footer > p.second_text {
+        color:white;
+        margin: 20px 0;
+    }
+}
+

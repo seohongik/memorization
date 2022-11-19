@@ -1,0 +1,247 @@
+SHOW USER;
+
+DESC employee;
+DESC salgrade;
+
+-- 급여(salary)가 1500 이상인 사원 출력하기
+
+SELECT *
+FROM employee
+WHERE salary >= 1500;
+
+
+-- 10번 부서 소속 사원 출력하기
+SELECT *
+FROM employee
+WHERE DNO = 10;
+
+-- 이름이 SCOTT인 사원 출력하기
+SELECT *
+FROM employee
+WHERE ename = 'SCOTT';
+
+
+-- 입사일(hiredate)이 '1981/01/01' 이전에 입사한 사원 출력
+SELECT *
+FROM employee
+WHERE hiredate <= '1981/01/01';
+
+-- 부서 번호가 10이고 직급이 매니저인 사원만 출력
+SELECT *
+FROM employee
+WHERE dno = 10 AND job = 'MANAGER';
+
+--10번 부서에 소속된 사원만 제외하고 나머지 사원출력
+SELECT *
+FROM employee
+WHERE dno=20 OR dno=30 OR dno=40;
+
+SELECT *
+FROM employee
+WHERE dno != 10;
+
+SELECT *
+FROM employee
+WHERE dno <> 10;
+
+SELECT *
+FROM employee
+WHERE dno ^= 10;
+
+SELECT *
+FROM employee
+WHERE NOT dno = 10;
+
+--부서번호가 10이거나 직급이 매니저인 사람만 출력하기
+SELECT *
+FROM employee
+WHERE dno = 10 OR job ='MANAGER';
+
+--급여가 1000에서 1500 사이인 사원 출력하기
+SELECT *
+FROM employee
+WHERE salary >=1000 AND salary <=1500; 
+
+-- 급여가 1000미만이거나 1500 초과인 사원 출력하기
+SELECT *
+FROM employee
+WHERE salary < 1000 OR salary > 1500;
+
+-- 커미션이 300이거나 500이거나 1400인 사원 출력하기
+SELECT *
+FROM employee
+WHERE commision = 300 OR commision = 500 OR commision = 1400;
+
+--급여가 1000에서 1500 사이인 사원 출력하기
+SELECT *
+FROM employee
+WHERE salary BETWEEN 1000 AND 1500; 
+
+-- 급여가 1000미만이거나 1500 초과인 사원 출력하기
+SELECT *
+FROM employee
+WHERE salary NOT BETWEEN 1000 AND 1500; 
+
+SELECT *
+FROM employee
+WHERE salary < 1000 OR salary > 1500;
+
+-- 1982년도에 입사한 사원 출력하기
+SELECT *
+FROM employee
+WHERE hiredate >= '1982/01/01' AND hiredate <= '1982/12/12';
+
+SELECT *
+FROM employee
+WHERE hiredate BETWEEN '1982/01/01' AND '1982/12/12';
+
+-- 커미션이 300이거나 500이거나 1400인 사원 출력
+SELECT *
+FROM employee
+WHERE commision IN(300,500,1400);
+
+-- 커미션이 300, 500, 1400이 아닌 사원 출력
+SELECT *
+FROM employee
+WHERE commision NOT IN(300,500,1400);
+
+SELECT *
+FROM employee
+WHERE NOT commision IN(300,500,1400);
+
+SELECT *
+FROM employee
+WHERE commision!=300 AND commision!=500 AND commision!=1400;
+
+SELECT *
+FROM employee
+WHERE commision^=300 AND commision^=500 AND commision^=1400;
+
+SELECT *
+FROM employee
+WHERE commision<>300 AND commision<>500 AND commision<>1400;
+
+--이름이 F로 시작하는 사원 출력하기
+SELECT *
+FROM employee
+WHERE ename = 'FORD';
+
+SELECT *
+FROM employee
+WHERE ename LIKE 'F%';
+
+--이름의 두 번째 글자가 'A'인 사원 출력하기
+SELECT *
+FROM employee
+WHERE ename LIKE '_A%';
+
+-- 이름의 세 번째 글자가 'A'인 사원 출력하기
+SELECT *
+FROM employee
+WHERE ename LIKE '__A%';
+
+-- 이름의 세 번째 글자가 'A'인 사원 출력하기
+SELECT *
+FROM employee
+WHERE ename NOT LIKE '%A%';
+
+-- 사원의 이름, 사원번호, 커미션을 출력하기
+SELECT ename, eno, NVL(commision,0) AS 커미션, dno
+FROM employee;
+
+--커미션이 NULL이 아닌 사원 출력하기
+SELECT *
+FROM employee
+WHERE commision IS NOT NULL;
+
+--커미션을 받는 사원을 출력
+SELECT *
+FROM employee
+WHERE commision > 0;
+
+--급여의 오름차순으로 사원 출력
+SELECT *
+FROM employee
+ORDER BY salary;
+
+--급여의 내림차순으로 사원 출력
+SELECT *
+FROM employee
+ORDER BY salary DESC;
+
+-- 사원의 이름을 오름차순으로 정렬하기
+SELECT *
+FROM employee
+ORDER BY ename;
+
+-- 사원의 이름을 내림차순으로 정렬하기
+SELECT *
+FROM employee
+ORDER BY ename DESC;
+
+-- 최근에 입사한 사원순으로 정렬하기
+SELECT *
+FROM employee
+ORDER BY hiredate DESC;
+
+--급여가 높은 순으로, 이름은 ABC순으로 정렬하기
+SELECT *
+FROM employee
+ORDER BY salary DESC, ename ASC;
+
+-- $300의 급여 인상을 계산한 후 사원의 이름, 급여, 인상된 급여를 출력하시오.
+
+SELECT ename, salary, salary+300 인상된급여
+FROM employee;
+
+SELECT ename, salary, salary+300 AS 인상된급여
+FROM employee;
+
+SELECT ename, salary, salary+300 AS "인상된급여"
+FROM employee;
+
+--사원의 이름, 급여, 연간 총수입을 총 수입이 많은 것부터 작은 순으로 출력시오. 연간 총수입은 월급에 12를 곱한 후 $100의 상여금을 더해서 계산하시오.
+SELECT ename, salary, salary*12+100 연간총수입
+FROM employee
+ORDER BY salary*12+100 DESC;
+
+SELECT ename, salary, salary*12+100 연간총수입
+FROM employee
+ORDER BY 연간총수입 DESC;
+
+SELECT ename, salary, salary*12+100 AS 연간총수입
+FROM employee
+ORDER BY 연간총수입 DESC;
+
+SELECT ename, salary, salary*12+100 AS "연간총수입"
+FROM employee
+ORDER BY "연간총수입" DESC;
+
+
+--급여가 2000을 넘는 사원의 이름과 급여를 급여가 많은 것부터 작은 순으로 출력하시오.
+SELECT ename, salary
+FROM employee
+WHERE salary > 2000
+ORDER BY salary DESC;
+
+--사원번호가 7788인 사원의 이름과 부서번호를 출력하시오
+SELECT ename, dno
+FROM employee
+WHERE NOT eno != 7788;
+
+SELECT ename, dno
+FROM employee
+WHERE NOT eno ^= 7788;
+
+SELECT ename, dno
+FROM employee
+WHERE NOT eno <> 7788;
+
+--급여가 2000에서 3000 사이에 포함되지 않는 사원의 이름과 급여를 출력하시오.
+SELECT ename, salary
+FROM employee
+WHERE salary NOT BETWEEN 2000 AND 3000;
+
+SELECT ename, salary
+FROM employee
+WHERE salary <2000 OR salary > 3000;   

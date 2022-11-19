@@ -1,0 +1,15 @@
+
+public class Ex031 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int mathScore = 90;
+		int engScore = 80;
+		
+		int total = mathScore + engScore;
+		System.out.println(total);
+		
+		int avgScore = total/2; // /나누기 연산이지만 몫만 반환한다 나머지 반환x
+	}
+
+}

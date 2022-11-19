@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="김예찬">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c7b32b093.js" crossorigin="anonymous"></script>
+    <title>로그인</title>
+    <script>
+
+
+        // 쿠키 이용하는 함수인데 아직 잘 모르겠어서 주석 처리 합니다!
+        // function setCookie(cname, cvalue, exdays) {
+        // var d = new Date();
+        // d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        // var expires = "expires="+d.toUTCString();
+        // document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        // }
+
+        // function getCookie(cname) {
+        // var name = cname + "=";
+        // var ca = document.cookie.split(';');
+        // for(var i = 0; i < ca.length; i++) {
+        //     var c = ca[i];
+        //     while (c.charAt(0) == ' ') {
+        //     c = c.substring(1);
+        //     }
+        //     if (c.indexOf(name) == 0) {
+        //     return c.substring(name.length, c.length);
+        //     }
+        // }
+        // return "";
+        // }
+
+        // function checkCookie() {
+        // var user = getCookie("username");
+        // if (user != "") {
+        //     alert("Welcome again " + user);
+        //     console.log(document.cookie);
+        // } else {
+        //     user = prompt("Please enter your name:", "");
+        //     if (user != "" && user != null) {
+        //     setCookie("username", user, 365);
+        //     }
+        // }
+        // }
+
+
+        var id = "scott";
+        var loginCheckFlag = 1;
+        function loginCheck() {
+            var theForm = document.mainForm;
+            theForm.method = "get";
+            theForm.action = "#";
+            var emailCheck =  document.querySelector('#tfEmail');
+            var pwdCheck = document.querySelector('#tfPwd');
+            // 콘솔창에 정보가 잘 들어가 있는지 확인해 주기 위함
+            console.log(emailCheck);
+            console.log(pwdCheck);
+            if (emailCheck.value == "scott" && pwdCheck.value == "tiger") {
+                alert("로그인이 완료 되었습니다.") ;
+                theForm.submit();
+            } else if (emailCheck.value != "scott") {
+                alert("아이디가 틀렸습니다. 다시한번 확인해주세요") ;
+                emailCheck.value = "";
+                emailCheck.focus();
+            }   else if (emailCheck.value == "scott" && pwdCheck.value == "") {
+                alert("비밀번호를 입력해주세요.") ;
+                pwdCheck.focus();
+            }   else if (pwdCheck.value != "tiger" && loginCheckFlag !=5) {   
+                alert("비밀번호가 " + loginCheckFlag +"회 틀렸습니다.\n5회 틀리면 로그인을 진행할수 없습니다.");
+                loginCheckFlag += 1;
+                pwdCheck.focus();
+                console.log(loginCheckFlag);
+            }   else if (pwdCheck.value != "tiger" && loginCheckFlag == 5) {   
+                alert("비밀번호가 5회 틀렸습니다.\n관리자에게 문의주세요");
+                document.querySelector('#btnSubmit').disabled = 'disabled';
+                emailCheck.disabled = 'disabled';
+                pwdCheck.disabled = 'disabled';
+                document.querySelector('#btnSubmit').style.backgroundColor = "#d9d9d9";
+                document.querySelector('.wrong_box').style.display = "block";
+            }   else 
+                alert("오류발생");
+        }
+
+    </script>
+</head>
+<body> <!-- 테마색으로 일단 킵 #87c7ff -->
+    <div id="wrap">
+        <!-- header 영역 -->
+        <header>
+            <div id="headerWrap">
+                <!-- 로고 영역 -->
+                <h1 id="logo">Kimyechan</h1>
+                <!-- //로고 영역 -->
+                <!-- 헤더메뉴 영역(일단 기본 폼만 작성)-->
+                <nav id="headerMenu">
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </nav>
+                <!-- //헤더메뉴 영역 -->
+                <div id="headerRightButton"></div>
+            </div>
+        </header>
+        <!-- //header 영역 -->
+        <div id="loginContainer">
+            <div id="content">
+                <!-- 로그인 정보 입력창 -->
+                <form name="mainForm">
+                    <div class ="wrong_box">
+                        <strong class = "tit_wrong_box">
+                            <span><i class="fas fa-skull"></i></span>
+                            <span>로그인 실패</span>
+                        </strong>
+                        <p class="desc_wrong_box">비밀번호를 5회 잘못 입력하셨습니다. <br> <a href="./pwd_find.html">비밀번호 찾기</a>를 이용 해보세요.</p>
+                    </div>
+                    <fieldset>
+                        <legend class="screen_out">로그인 입력폼</legend>
+                        <div class="box_login_register">
+                            <h3 class="tit_register">로그인</h3>
+                            <!-- 아이디 입력창 -->
+                            <div class="wrap_tf">
+                                <label for="tfEmail" class="lab_write">
+                                    이메일</label>
+                                <div id="emailBox" class="box_tf">
+                                    <input type="text" name="email" id="tfEmail" placeholder="아이디를 입력해주세요" class="tf_write">
+                                </div>
+                            </div>
+                            <!-- //아이디 입력창 -->
+                            <!-- 비밀번호 입력창 -->
+                            <div class="wrap_tf">
+                                <label for="tfPwd" class="lab_write">
+                                    비밀번호</label>
+                                <div id="passwordBox" class="box_tf">
+                                    <input type="password" name="password" id="tfPwd" placeholder="비밀번호를 입력해주세요" class="tf_write">
+                                </div>
+                            </div>
+                            <!-- //비밀번호 입력창 -->
+                            <ul class="list_info">
+                                <!-- 신규지원자 -->
+                                <li>처음 지원하시는 분들은 지원자 등록을 먼저 해주세요.<a href="../Project01/agree.html" class="link_info">신규지원자등록</a></li>
+                                <!-- //신규지원자 -->
+                                <!-- 아이디찾기링크 -->
+                                <li>아이디를 잊어버리셨나요?<a href="id_find.html" class="link_info">아이디 찾기</a></li>
+                                <!-- //아이디찾기링크 -->
+                                <!-- 비밀번호찾기링크 -->
+                                <li>비밀번호를 잊어버렸나요?<a href="pwd_find.html" class="link_info">비밀번호 찾기</a></li>
+                                <!-- 비밀번호찾기링크 -->
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <!-- 로그인 버튼 -->
+                    <button id="btnSubmit" type="button" class="btn_follow" onclick="loginCheck();">로그인</button>
+                    <!-- //로그인 버튼 -->
+                </form>
+                <!-- //로그인 정보 입력창 -->
+            </div>
+        </div>
+        <!-- footer 영역 -->
+        <footer>
+            <div class="footer_wrap" role="contentinfo">
+                <!-- footer 리스트 영역 -->
+                <ul>
+                    <li><a href="../Project01/agree.html" id="first">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">책임의 한계와 법적고지</a></li>
+                    <li><a href="#">회원정보 고객센터</a></li>
+                </ul>
+                <!-- //footer 리스트 영역 -->
+                <!-- address 영역 -->
+                <address>
+                    <div id="copyright">copyright c <strong>(주)Kimyechan</strong> All Right Reserved.</div>
+                </address>
+                <!-- //address 영역 -->
+            </div>
+        </footer>
+        <!-- //footer 영역 -->
+    </div> 
+
+</body>
+</html>

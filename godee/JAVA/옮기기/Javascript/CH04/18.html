@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 - 18</title>
+    <script>
+        var userId = window.prompt("아이디를 입력해주세요.", "")
+        var userPwd = window.prompt("비밀번호를 입력해주세요.", "")
+        userPwd = parseInt(userPwd);
+        if (userId == "admin" && userPwd == 1234) {
+            alert("환영합니다.");
+        } else if (userId != "admin") {
+            alert("사용자 아이디를 잘못 입력했습니다.");
+        } else if (userPwd != 1234) {
+            alert("패스워드를 잘못 입력했습니다.");
+        } else {
+            alert("아이디와 비밀번호를 확인해주세요.");
+        }
+
+        if (userId == "admin" ) {
+            if (userPwd == 1234) {
+                alert("환영합니다");
+            } else {
+                alert("패스워드를 잘못 입력했습니다.");
+            } 
+        } else {
+            alert("사용자 아이디를 잘못 입력했습니다.");
+        }
+
+        if (userId == "admin" && userPwd == "1234") {
+            alert("환영합니다.");
+        } else if (userId != "admin"){
+            alert("사용자 아이디를 잘못 입력했습니다.");
+        } else {
+            alert("패스워드가 잘못 입력했습니다.")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

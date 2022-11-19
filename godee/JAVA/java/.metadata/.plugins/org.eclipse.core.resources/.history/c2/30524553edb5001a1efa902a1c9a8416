@@ -1,0 +1,26 @@
+//package 이름이 templetTest입니다.
+package templetTest;
+
+
+//AICar 클래스를 정의합니다.
+//AICar 클래스는 car 추상 클래스를 상속받습니다.
+
+
+public class AICar extends Car {
+
+	@Override
+	public void drive() {
+		// TODO Auto-generated method stub
+		System.out.println("자율 주행합니다.");
+		System.out.println("자동차가 알아서 방향을 전환합니다.");
+		
+	}
+
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+		System.out.println("스스로 멈춥니다.");
+		
+	}
+
+}

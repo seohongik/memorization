@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터 -14</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+       .wrap{width: 500px; margin: 0 auto;}
+       div{padding: 5px;}
+       .item{float: left; width: 100px;}      
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            //"#submitBtn:button"
+            $("#submitBtn:button").click(function(){
+                invalid();
+            });
+            //.click(function(){}); onclick아님
+            $("#resetBtn:button").click(function(){
+                clearInput();
+            });
+            function invalid(){
+                if($("#userId").val()==""){
+                    alert("아이디를 입력하세요.");
+                    return;
+                }
+
+                var userName=$("#userName").val();
+                if(userName==""){
+                    alert("이름을 입력하세요");
+                    return;
+                }
+                if($("#pwd").val()==""||$("#pwdConfirm").val()==""){
+                    alert("암호를 입력하세요")
+                    return;
+                }
+
+                if($("#pwd").val()!=$("#pwdConfirm").val()){
+                    alert("암호가 일치하지 않습니다.");
+                    return;
+                }
+
+                alert(userName+"님 환영합니다.");
+            }
+            function clearInput(){
+                $("#userId:text").val("");
+                $("#userName:text").val("");
+                $("#pwd:password").val("");
+                $("#pwdConfirm:password").val("");
+            }
+        });
+
+    </script>
+</head>
+<body>
+   <div class="wrap">
+       <div>
+           <span class='item'>아이디*</span>
+           <input id="userId" type="text">
+       </div>
+       <div>
+        <span class='item'>이름*</span>
+        <input id="userName" type="text">
+        </div>
+        <div>
+            <span class='item'>암호*</span>
+            <input id="pwd" type="password">
+        </div>
+        <div>
+            <span class='item'>암호확인*</span>
+            <input id="pwdConfirm" type="password">
+        </div>
+        <input type="button" id="submitBtn" value="회원가입">
+        <input type="button" id="resetBtn" value="취소">    
+   </div>
+</body>
+</html>

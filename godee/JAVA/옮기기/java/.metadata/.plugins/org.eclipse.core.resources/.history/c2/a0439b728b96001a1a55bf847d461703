@@ -1,0 +1,16 @@
+class Calc {
+	int add(int a, int b) {
+		return a+b;
+	}
+}
+
+public class AloneTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		VarargsSample vt = new VarargsSample();
+		System.out.println("(2,5,7,0,1)ÃÖ´ñ°ª : " + vt.getMax(2,5,7,0,1));
+		System.out.println("(100,54,1)ÃÖ´ñ°ª : "+vt.getMax(100,54,1));
+	}
+
+}

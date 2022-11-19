@@ -1,0 +1,5 @@
+package templetTest;
+
+public abstract class Car {
+
+}

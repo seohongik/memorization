@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Ex02 {
+	
+	
+	public static void main(String[] args) {
+		
+	Scanner sc=new Scanner(System.in);
+	
+	
+	int pure=sc.nextInt()+1;	
+		
+		while(pure>0) {
+			
+			if(pure==1) {
+				break;
+				
+			}else {
+				
+				pure--;
+			}
+			
+		
+			
+			System.out.print(pure+"*");
+			
+			
+		}
+		
+	
+	}
+	}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute postion을 이용한 박스의 배치</title>
+    <style type="text/css">
+        
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{ margin:20px; }
+        h1{
+            background: silver;
+            color: white;
+        }
+        p{
+            background: yellow;
+            padding:10px;
+        }
+
+        
+        .abs{
+            position: absolute;
+            left: 400px; top:100px;
+            width: 300px; height: 100px;
+           background: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>absolute position</h1>
+    <p class="abs">박스의 위치를 지정할 때 사용할 수 있는 오프셋 속성으로는 top,right,bottom,left등이 있으며 자신이 포함된 컨테이닝 방스의 위치를 기준으로 배치됩니다.</p>
+    <p>절대 위치(absolute position) 지정 방식으로 박스가 배치될경우, 문서의 일반적인 흐름을 벗어나 배치되므로 다른 블록 요소의 배치에 영향을 주고 본문 요소와 겹칠 수도 있습니다.</p>
+   
+
+</body>
+</html>

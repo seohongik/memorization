@@ -1,0 +1,30 @@
+//package이름이 templetTest입니다.
+package templetTest;
+
+//Car 추상클래스를 정의합니다.
+public abstract class Car {
+	//추상 메서드를 선언합니다. 
+	
+	public abstract void drive();
+	public abstract void stop();
+	
+	//메서드 (멤버 함수)를 정의합니다.
+	public void startCar() {
+		System.out.println("시동을 킵니다.");
+	}
+	
+	public void turnOff() {
+		System.out.println("시동을 끕니다.");
+	}
+	
+	//템플릿 메서드를 정의합니다.
+	 final private void run() {
+		
+		startCar();
+		drive();
+		stop();
+		turnOff();
+		
+	}
+	
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에니메이션-1</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+      
+      div{background: red; margin:3px; width: 100px; height: 100px; float: left;}
+    </style>
+
+    <script>
+      $(function(){
+        $("#slideUp").click(function(){
+          $("div").slideUp();
+        });
+        $("#slideDown").click(function(){
+          $("div").slideDown();
+        });
+        $("#slideToggle").click(function(){
+          $("div").slideToggle();
+        });
+      });
+
+    </script>
+</head>
+<body>
+    <button id="slideUp">slideUp</button>
+   
+    <button id="slideDown">slideDown</button>
+    <button id="slideToggle">slideToggle</button>
+    <p></p>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현 객체-1</title>
+    <script>
+        var str = "Html Css Jquery";
+        // var reg1 = /css/; 약식입니다. 
+        var reg1 = new RegExp("css"); // 정규식
+        var result1 = reg1.test(str);
+        document.write(result1, "<br>");
+
+        // var reg2 = /css/i;
+        var reg2 = new RegExp("css", "i");
+        var result2 = reg2.test(str);
+        document.write(result2, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

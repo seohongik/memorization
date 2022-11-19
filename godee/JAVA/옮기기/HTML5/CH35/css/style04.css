@@ -1,0 +1,22 @@
+@charset "uft-8";
+
+/* reset */
+*{margin:0; padding:0;}
+ol, ul, li {list-style:none;}
+a {outline:0; text-decoration:none; color:#555;}
+img {vertical-align:top; border:0;}
+
+/*  common */
+body {font:12px/1.6 arial;color:#555;}
+
+div {
+    width:400px; height:400px;
+    background: red;
+    margin:100px auto;
+    transition: all 1s ease 1s;
+}
+
+div:hover {
+    transform: rotate(45deg);
+    background: blue;
+}

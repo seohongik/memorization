@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자 -3</title>
+    <style tpye="text/css">
+        [title~=flower]{border: 5px solid yellow;}
+        /*~은 포함 여기선 타이틀에 플라워 포함 사이에 붙여쓰기, -, _있음 안됨*/
+        /* 띄어쓰기 단독 단어 실행가능*/
+
+
+    </style>
+
+</head>
+<body>
+
+    <img src="./img/flower.jpg" title="flower" width="150"
+    height="200">
+    <img src="./img/rose.jpg" title="rose flower" width="150"
+    height="150">
+    <img src="./img/tree.jfif" title="tree" width="200" height="300">
+ 
+    <br>
+    <!-- /*~은 포함 여기선 타이틀에 플라워 포함 사이에 붙여쓰기, -, _있음 안됨*/-->
+    <img src="./img/rose.jpg" title="roseflower" width="150"
+    height="150">
+    <img src="./img/rose.jpg" title="rose_flower" width="150"
+    height="150">
+    <img src="./img/rose.jpg" title="rose-flower" width="150"
+    height="150">
+    <!--///*~은 포함 여기선 타이틀에 플라워 포함 사이에 붙여쓰기, -, _있음 안됨*/-->
+</body>
+</html>

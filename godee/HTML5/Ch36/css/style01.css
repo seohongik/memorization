@@ -1,0 +1,27 @@
+/*reset*/
+@charset "utf-8";
+
+
+/*common*/
+*{margin: 0; padding: 0;}
+ul ol li{list-style: none;}
+a{text-decoration: none;}
+img{vertical-align: top; border: 0;}
+body{font: 12px/1.6 arial; color: #555;}
+
+
+
+
+@keyframes ani{
+
+    0%{ transfom: rotate( 0deg);}
+    50%{ transfom: rotate( 120deg); }
+    100%{transfom: rotate( 360deg);}
+}
+
+
+div{
+    width: 300px; height: 300px;
+    margin:100px;
+    background: blue;
+}

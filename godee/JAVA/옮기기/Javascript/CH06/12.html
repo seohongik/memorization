@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수-12</title>
+    <script>
+        function calculator(op,num1,num2) {
+            var result = 0;
+            switch(op) {
+                case "+" :
+                    result = num1 + num2;
+                    break;
+                case "-" :
+                    result = num1 - num2;
+                    break;
+                case "*" :
+                    result = num1 * num2;
+                    break;
+                case "/" : 
+                    result = num1 / num2;
+                    break;
+                
+                default :
+                    result = "지원되지 않는 연산자입니다.";
+            }
+            return result;
+        }
+
+        document.write(calculator("+", 1, 3));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+public class Ex17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//게시판 학사관리에 유용하게 쓰임
+		int[][] score = {
+				{100,100,100},
+				{20,20,20},
+				{60,60,60},
+				{80,80,80}
+		};
+		
+		int sum =0;
+		for(int i=0; i<score.length; i++) {//행부분
+			for(int j=0; j<score[i].length; j++) {
+				//열부분
+				
+				System.out.print(score[i][j]+"");
+				
+			}
+			System.out.println();
+			
+		}
+	}
+
+}

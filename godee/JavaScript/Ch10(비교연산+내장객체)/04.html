@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜정보 객체-2</title>
+    <script>
+        // 오늘 날짜 저장 2020년 5월1일이지만 월은 0부터 시작하므로 4로 지정
+        var today = new Date(2020,4,1);
+        // document.write(today);
+
+        // 월은 0부터 시작하므로 +1을 해서 나타냄
+        var theMonth = today.getMonth()+1;
+        document.write(theMonth,"<br>");
+
+        var theDate = today.getDate();
+        document.write(theDate,"<br>");
+
+        var theDay = today.getDay();
+        document.write(theDay,"<br>");
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

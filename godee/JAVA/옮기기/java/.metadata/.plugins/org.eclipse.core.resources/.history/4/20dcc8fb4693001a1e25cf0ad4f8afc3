@@ -1,0 +1,62 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Test {
+
+ public static void main(String[] args) {
+  // TODO Auto-generated method stub
+  //Scanner sc = new Scanner(System.in);
+  
+  int numStudent = 5; //학생 수
+  int numSubject = 3; //과목 수
+  
+  //학생 별 과목 별 점수 저장된 배열(행:학생, 열:과목)
+  int[][] score = {
+    {100,100,100},
+    {20,20,20},
+    {30,30,30},
+    {40,40,40},
+    {50,50,50}
+   };
+  
+  //총점, 평균값 저장할 배열 생성
+  int sumStudent[] = new int[numStudent]; //학생 별 총점
+  int sumSubject[] = new int[numSubject]; //과목 별 총점
+  double avg[] = new double[numStudent]; //학생 별 평균
+  
+  
+  for(int i=0;i<score.length;i++) {
+   for(int j=0;j<score[i].length;j++) {
+    sumStudent[i] += score[i][j]; //학생 별 총점
+    sumSubject[j] += score[i][j]; //과목 별 총점
+   }
+   avg[i] = (double)sumStudent[i] / numSubject; //학생 별 평균
+   
+  }
+  
+  System.out.println("번호     국어      영어      수학      총점      평균");
+  System.out.println("==============================");
+  
+  for(int i=0;i<numStudent;i++) {
+   
+   System.out.printf("%3d",i+1);
+   
+   for(int j=0;j<score[i].length;j++) {
+    System.out.printf("%5d",score[i][j]);
+   }
+   
+   System.out.printf("%5d %6.1f",sumStudent[i],avg[i]);
+   System.out.println();
+  }
+  
+  System.out.println("==============================");
+  System.out.print("총점:");
+  
+  for(int i=0;i<numSubject;i++) {
+   System.out.printf("%5d",sumSubject[i]);
+  }
+  
+ }
+
+}
+

@@ -1,0 +1,30 @@
+/*reset*/
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none;}
+img{vertical-align: top; border: 0;}
+/*common*/
+body{font: 12px/1.6 1rial; color: #555;}
+
+div{
+    width: 300px; height: 300px;
+    margin : 100px auto;
+}
+
+
+/*가로폭이 1024px 이상일때*/
+@media screen and (min-width:1024px){
+    div{ background: red;}
+}
+
+
+/*가로폭이 640px 이상이고  1023px이하일때*/
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+    div{background: green;}
+}
+/*가로폭이 639px 이하일때 */
+@media screen and (max-width : 639px){
+    div{background: blue;}
+}

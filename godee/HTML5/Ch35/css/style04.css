@@ -1,0 +1,25 @@
+/*reset*/
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul ol li{list-style: none;}
+a{text-decoration: none;}
+img{vertical-align: top; border: 0;}
+/*common*/
+body{font: 12px/1.6 1rial; color: #555;}
+
+
+/*https://easings.net/*/
+
+div{ width: 400px; height: 400px;
+    background: red;
+    margin: 100px auto;
+    /*호버전에*/transition: all 1s ease 10s;
+    /*transition:속성명 전환시간 가속도 설정 지연시간;*/
+
+}
+
+div:hover{
+transform: rotate(45deg);
+background: blue;
+
+}

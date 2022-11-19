@@ -1,0 +1,36 @@
+@charset "uft-8";
+
+/* reset */
+*{margin:0; padding:0;}
+ol, ul, li {list-style:none;}
+a {outline:0; text-decoration:none;}
+img {vertical-align:top; border:0;}
+
+/*  common */
+body {
+    font:12px/1.6 arial;color:#555;
+    background-image:url("../images/bg.jpg");
+}
+
+div.logo {
+    width:220px; height:200px;
+    /* text-align: center; */
+    margin: 80px auto;
+}
+
+div.list {
+    padding: 50px;
+    width: 600px;
+    border: 3px solid red;
+    background-color: white;
+    margin: 0 auto;
+}
+
+div.list > ul > li {
+    margin-top:10px;
+}
+
+div.list a {
+    font-size: 15px;
+}
+

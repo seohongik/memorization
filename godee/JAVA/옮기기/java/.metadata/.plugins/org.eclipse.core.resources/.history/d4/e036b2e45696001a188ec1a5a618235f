@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Student {
+	int num;
+	String name;
+	
+	
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
+	
+}
+
+
+public class Ex24 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Student student1 = new Student();
+		System.out.print("학번입력 >> ");
+		Scanner sc = new Scanner(System.in);
+		
+		int num;
+		num = sc.nextInt();
+		student1.setNum(num);
+		student1.getNum();
+	}
+
+}

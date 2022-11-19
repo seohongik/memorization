@@ -1,0 +1,54 @@
+//package이름이 gameTest입니다.
+package gameTest;
+
+//Player라는 클래스가 정의되었습니다.
+
+
+public class Player {
+
+	//Player가 가지는 레벨 변수를 선언합니다.
+	
+	//has a 관계 
+	private PlayerLevel level;
+	
+	
+	//디폴트 생성자를 정의합니다;
+	public Player(){
+		
+	//처음 생성되면 BeginnerLevel로 시작합니다.
+		level=new BeginnerLevel();
+		level.showLevelMessage();
+		
+	}
+	
+	//현제 플레이어가 Level값을 가져오는 get()메소드를 만듭니다.
+	
+	public PlayerLevel getLevel() {
+		
+		
+		return level;
+	}
+	//Level 변경 메소드를 정의합니다.
+	//매개변수 자료형은 모든 레벨로 변환 가능한 PlayerLevel 형으로 지정합니다.
+	
+	public void upradeLevle(PlayerLevel level) {
+		
+		this.level=level;
+		//레벨 메시지 출력
+		level.showLevelMessage();
+	}
+	//PlaterLevel go()를 호출하는 play() 메시지를 정의합니다.
+	public void play(int count) {
+		
+		level.go(count);
+		
+		
+		
+	}
+	
+	
+
+
+	
+	
+}

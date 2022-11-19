@@ -1,0 +1,330 @@
+ROUND : 특정 자릿수에서 반올림 합니다. 
+
+TRUNC : 특정 자리수에서 잘라냅니다. (버림)
+
+MOD : 입력 받은 수를 나눈 나머지값을 반환합니다. 
+
+-------------
+
+ROUND 함수
+
+ROUND(대상, 자릿수)
+
+ROUND 함수는 지정한 자릿수에서 반올림 할 수 있도록 자릿수를 지정할 수 있습니다. 
+
+자릿수에 음수를 지정할 수 있는데 이럴 경우 소수점 이하가 아니라 반대쪽인 일 단위, 십단위, 백단위, 순으로 거슬러 올라가게 되며,
+인자값(파라미터)이 양수 일 때와는 달리 해당 자리에서 반올림이 일어나게 됩니다. 
+
+	-1인 경우에는 일의자리 부터 반올림 연산을 합니다. 
+
+-------------------
+TRUNC 함수
+
+TRUNC(대상,자릿수)
+
+TRUNC 함수는 소수점 n째 자리까지 남기고 나머지는 버립니다. 
+
+TRUNC 함수의 두 번째 매개변수 값을 생략하면 0으로 인식하여 일의 자리까지 남기고 소수점 이하 자리는 모두 버립니다.
+
+2이면 소수점 이하 두 번째까지 남기고 세 번째 자리부터 버립니다. 
+
+	-1인 경우에는 일의자리 부터 버림 연산을 합니다. 
+
+-----------------
+
+MOD 함수
+
+MOD(m,n)
+
+MOD 함수는 첫번째 값(m)을 두번째 값(n)으로 나눈 나머지를 반환합니다. 
+
+------------------------
+***날짜 함수
+
+
+SYSDATE : 시스템에 저장된 현재 날짜를 반환 합니다. 
+
+MONTHS_BETWEEN : 두 날짜 사이의 몇 개월인지를 반화합니다. 
+
+ADD_MONTHS : 특정 날짜에 개월 수를 더합니다. 
+
+NEXT_DAY : 특정 날짜에서 최초로 도래하는 매개변수로 받은 요일의 날짜를 반환합니다. 
+
+LAST_DAT : 해당 달의 마지막 날짜를 반환합니다. 
+
+ROUND : 매개변수로 받은 날짜를 특정 기준으로 반올림합니다. 
+
+TRUNC : 매개변수로 받은 날짜를 특정 기준으로 버립니다.  
+
+------------
+***날짜 연산
+
+날짜에 숫자를 더하거나 빼서 날짜를 계산할 수 있습니다. 
+
+date + number =날짜 : 날짜에 일수를 더하여 날짜 계산
+
+date - number= 날짜 : 날짜에 일수를 빼서 날짜 계산
+
+date - date = 일수 : 날짜와 날짜를 빼서 일수를 계산합니다. 
+
+date + number/24 =날짜 : 날짜의 시간을 더하여 날짜 계산
+
+-----------
+
+ROUND(date,format)
+
+ROUND 함수로 날짜에 대한 반올림을 합니다. 
+
+format 모델
+
+CC ,SCC : 4자리 연도의 끝 두글자를 기준으로 반올림
+
+SYYY ,YYYY ,YEAR ,SYEAR ,YYY ,YY ,Y(년 7월 1일 부터 반올림)
+
+DDD ,D ,J:일을 기준
+
+HH ,HH12 ,HH24 :시를 기준
+
+Q: 한 분기의 두 번째 달에 16일을 기준으로 반올림합니다.
+
+MONTH ,MON, MM ,RM :월(16일 기준으로 반올림)
+
+DAY ,DY ,D 한 주가 시작되는 날짜 
+
+MI : 분을 기준
+
+	--특정 날짜에서 월을 기준으로 반올림한  날짜 구하기 
+
+	SELECT hiredate, ROUND(hiredate,'MONTH')
+	FROM employee;
+
+------
+
+TRUNC(date,format)
+
+TRUNC 함수 역시 숫자를 잘라내는 것 뿐만 아니라 날짜를 잘라 낼 수 있습니다. 
+
+ROUND 함수와 마찬가지로 포멧 형식을 주어 다양한 기준으로 날짜를 잘라낼 수 있습니다. 
+
+	 --특정 날짜에서 월을 기준으로 버림한 날짜 구하기 
+
+	SELECT hiredate, TRUNC(hiredate,'MONTH')
+	FROM employee;
+
+-----------------
+
+MONTHS-BETWEEN 함수
+
+
+MONTHS-BETWEEN (date1, date2)
+
+
+MONTHS-BETWEEN 함수는 날짜와 날짜 사이의 개월 수를 구하는 함수입니다. 
+
+date1과 date2 간의 개월수를 계산하며 결과는 양수 또는 음수입니다. 
+
+date1이 date 2보다 나중이면 결과가 양수이고 date1이 date2보다 먼저이면 결과는 음수 입니다. 
+
+-----------------
+ADD_MONTHS 함수
+
+ADD_MONTHS (date,n)
+
+ADD_MONTHS 함수는 특정 개원 수를 더한 날짜를 구하는 함수입니다.
+
+date에 n달을 더합니다.
+
+
+n은 정수여야 하고 음수일 수도 있습니다. 
+
+	--각 사원들이 입사한지 6개월이 지난 날짜 구하기
+
+	SELECT eno, ename, dno, hiredate, ADD_MONTHS(hiredate,6) AS "입사후 6개월"
+	FROM employee;
+-------------
+
+NEXT_DAY 함수
+
+
+NEXT_DAY (date,'요일')
+
+
+NEXT_DAY 함수는 해당 날짜를 기준으로 최조로 도래하는 요일에 해당되는 날짜를 반환하는 함수 입니다.
+
+------------
+LAST_DAY 함수
+
+LAST_DAY 함수는 해당 날짜가 속한 달의 마지막날짜를 반환하는 함수입니다. 
+
+대부분의 달의 경우 마지막 날이 정해셔 있지만 2월달은 마지막 날이 28또는 29일 될수 있으므로 
+
+이때 사용하면 효율적 입니다. 
+
+-----------
+
+****형 변환 함수 
+------------------------------------------------
+TO_CHAR( number | date, 'format')
+
+	날짜나 숫자를 문자로 변환하기 위해서 사용합니다. 
+	
+	형식 모델(format) -날짜
+	YYYY : 연도 표현 (4자리)
+	YY    : 연도 표현(2자리)
+	MM  : 월을 숫자로 표현
+	MON : 월을 알파벳으로 표현
+	DAY  : 요일 표현
+	DY    : 요일을 약어로 표현
+
+	형식 모델(format) -시간
+	AM or PM      : 오전(AM), 오후 (PM) 시각 표시
+	A.M or P.M    :오전(A.M), 오후 (P.M) 시각 표시
+	HH or HH12   : 시간(1~12) 표시
+	HH24	       : 24시간으로 표현(0~23)
+	MI	       : 분표현
+	SS	       : 초표현
+
+	형식모델(formet) - 숫자
+	0 	       : 자릿수를 나타내며 자릿수를 맞지 않을 경우 0으로 채운다
+	9	       : 자릿수를 나타내며 자릿수가 맞지 않아도 채우지 않습니다. 
+	L	       : 각 지열별 통화 기호를 앞에 표시합니다. 
+	.	       : 소수점을 표시합니다. 
+	,                  : 천 단위 자리 구분을 표시합니다. 
+
+
+
+	
+-------------------------------
+TO_DATE('char','format')
+
+	날짜를 나타내는 문자열을 지정된 'format'에 따라 날짜 값으로 변환합니다. 
+	'format'이 생각되면 오라클의 기본 날짜 형식은 'YY/MM/DD'형식으로 인식합니다.  
+
+	SELECT   TO_CHAR(SYSDATE, 'YYYY/MM/DD HH:MI:SS'),
+        		TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS')
+	FROM dual;
+
+
+	SELECT ename,
+        		TO_CHAR(salary, 'L999,999'),
+        		TO_CHAR(salary, 'L000,000')
+	FROM employee;
+
+TO_NUMBER
+
+	특정 데이터를 숫자형으로 변환해주는 함수입니다. 
+	
+	SELECT TO_NUMBER('100,000','999,999')- TO_NUMBER('50,000','999,999') AS 급액
+	FROM dual;
+
+
+-----------------------------
+일반 함수 - NVL 함수
+
+NVL(espr1,espr2)
+
+NVL 함수는 NULL을 0또는 다른 값으로 변환하기 위해서 사용하는 합수입니다. 
+
+NULL을 실제 값으로 변환하기 위해서 사용하며, 데이터 유형은 날짜,문자,숫자입니다. expr1에는 NULL을 표함하는 
+
+컬럼 또는 표현식을 expr2에서는 NULL을 대체하는 값을 기술해야 하며 expr1과 expr2는 *반드시 데이터 타입이 일치*해야합니다. 
+
+
+	SELECT ename, job, NVL(commision,0), salary*12+NVL(commision,0)
+	FROM employee
+	ORDER BY job;
+
+---------------------------
+일반 함수 - NVL2 함수
+
+NVL2(expr1,expr2,expr3)
+
+NVL2 함수는 expr1을 검사하여 그 결과가 NULL이며 expr3를 반환하고 NULL이 아니면 expr2을 반환합니다. 
+
+	SELECT ename, job, salary, commision, NVL2(commision,salary*12+commision,salary*12) 
+	FROM employee
+	ORDER BY job;
+
+
+-------------------------
+
+일반 함수 - NULLIF 함수
+
+NULLIF(expr1,expr2)
+
+NULLIF 함수는 두 표현식을 비교하여 동일한 경우에는 NULL을 반환하고 동일하지 않으면 첫번째 표현식을 반환합니다.
+
+
+-----------------------
+
+일반 함수 COLESCE 함수
+
+	
+COLESCE(expr1,expr2,.......,exprN)
+
+
+COLESCE 함수는 매개변수 중에서 NULL이 아이는 첫번째 파라메터를 반환합니다. 
+
+expr1이 NULL이 아니면 expr1을 반환합니다. 
+
+expr1이 NULL이고 expr2가 NULL이 아니면 expr2를 반환합니다. 
+
+expr1부터 exprN-1까지의 값이 NULL이고 exprN이 NULL이 아니면 exprN을 반환합니다. 
+
+	--NULL 값 처리하기 (ex 자동입력 방지) NULLIF는 널이 아닐경우 첫번째 값 반환
+
+	SELECT NULLIF('A','A'), NULLIF('A','B')
+	FROM dual;
+
+-------------------------------
+DECODE 함수는 기존 프로그램 언어의 switch case문과 같은 기능을 갖습니다.
+
+
+DECODE(
+		표현식,조건1,결과1,
+		         조건2,결과2,
+		         조건3,결과3,
+		         기본결과n			
+)
+
+------------------------------
+CASE 함수는 기존 프로그램 언어의 if else문과 같은기능을 갖습니다. 
+
+CASE 표현식
+	WHEN 조건1 THEN 결과1
+	WHEN 조건2 THEN 결과2
+	WHEN 조건3 THEN 결과3
+	ELSE 결과 n
+END
+
+-----------------------------
+x=10
+y=0
+
+
+y=x++ 
+( y:x       x:x+1)
+리턴값 x=11, y=10
+
+
+x=10
+y=0
+
+y=x--
+( y:x       x:x-1)
+리턴값 x=9, y=10
+
+
+x=10
+y=0
+
+y=++x
+(x:x+1      y:x)
+리턴값 x=10, y=0
+
+
+x=10
+y=0
+y=--x
+(x:x-1      y:x)
+리턴값 x=9, y=9

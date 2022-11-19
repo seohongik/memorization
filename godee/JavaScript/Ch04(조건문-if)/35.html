@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-35</title>
+    <script>
+        /* 조건문 실습(5) */
+        /*
+        학점을 구하기 예제입니다.
+        하나의 평균 값을 입력받아 요구사항에 맞게 출력해주세요.
+        요구사항
+        1. 학점은 다음과 같이 계산해주세요.
+        입력 값이 100~90 이면 A학점
+        입력 값이 89~80 이면 B학점
+        입력 값이 79~70 이면 C학점
+        입력 값이 69~60 이면 D학점
+        입력 값이 59~ 이면 F학점
+        2. 예를 들어 입력 값이 100이면 다음과 같이 출력해주세요.
+        100 점수의 점수의 학점은? A학점 입니다.
+        [예시]
+        입력값 : 100 (엔터)
+        출력값 : "100점의 학점은? A 입니다"
+        */
+
+        var score = window.prompt("점수를 입력해주세요.");
+        score = parseInt(score);
+        var grade;
+        
+
+        if(score >=0 && score <=100) {
+            switch(parseInt(score/10)) {
+                case 10 : 
+                case 9 : 
+                    grade = "A";
+                    break;
+                case 8 : 
+                    grade = "B";
+                    break;
+                case 7 : 
+                    grade = "C";
+                    break;
+                case 6 : 
+                    grade = "D";
+                    break;
+                default :
+                    grade = "F";
+            }
+            document.write( score + "의 학점은? " + grade +"입니다."); 
+    }
+    else {
+        document.write("0~100 사이의 점수를 입력해주세요.");
+    }
+    </script>
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+//package이름은 gameTest입니다.
+package gameTest;
+
+//클래스 이름이 GameEngine 입니다. 
+public class GameEngine {
+	//main method()가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Player 생성합니다.
+		//처음 생성하면 BeginnerLevel입니다.
+		Player player = new Player();
+		player.play(1);
+		
+		System.out.println();
+		
+		//중급자 레벨 aPlayer를 생성합니다.
+		AdvancedLevel aPlayer = new AdvancedLevel();
+		player.upradeLevle(aPlayer);
+		player.play(2);
+		
+		System.out.println();
+		//고급자 레벨 sPlayer를 생성합니다.
+		SuperLevel sPlayer= new SuperLevel();
+		player.upradeLevle(sPlayer);
+		player.play(3);
+		
+	}
+
+}

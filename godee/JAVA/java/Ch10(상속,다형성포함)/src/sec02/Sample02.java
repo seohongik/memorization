@@ -1,0 +1,89 @@
+package sec02;
+
+
+
+class Car{
+	
+	
+	private int num;
+	private double gas;
+	
+	/*public Car(int num, double gas) {
+		super();
+		this.num = num;
+		this.gas = gas;
+	}*/
+	
+	/*public Car() {
+		super();
+	}*/
+
+	public Car() {//기본생성자
+		num=0;
+		gas=0.0;
+		System.out.println("자동차가 생성되었습니다.");
+	}
+	
+	public Car(int num, double gas) {
+		this.num=num;
+		this.gas=gas;
+		System.out.print("차량번호는"+this.num+"이고");
+		System.out.println("연료량은"+this.gas+"인 자동차가 생성되었습니다.");
+	}
+	
+	public void setCar(int num, double gas) {
+		
+		this.num =num;
+		this.gas=gas;
+		System.out.println("차량번호를"+num+"으로 변경하였습니다.");
+		System.out.println("연료량을" + gas+"으로 변경하였습니다.");
+			
+		
+	}
+	public void show() {
+		
+		System.out.println("차량번호는" +num+"입니다.");
+		System.out.println("연료량은"+gas+"입니다.");
+	}
+	
+}
+class RacingCar extends Car{
+	
+	private int course;
+	
+	public RacingCar() {
+		course=0;
+		System.out.println("레이싱카가 생성되었습니다.");
+		
+	}
+	
+	//핵심
+	public RacingCar(int num, double gas, int course) {
+		
+		super(num,gas);
+		
+		this.course =course;
+		
+		System.out.println("코스번호가"+course+"인 레이싱카가 생성되었습니다.");
+	}
+	
+	public void setCourse() {
+		course = course;
+		System.out.println("코스번호가"+course+"로 변경되었습니다.");
+		
+	}
+	
+	
+}
+public class Sample02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	RacingCar rcCar1=new RacingCar(123, 567.91, 7);	
+		
+	}
+	
+	
+
+}

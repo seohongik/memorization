@@ -1,0 +1,55 @@
+package sec06;
+
+class Car{
+	
+	private int num;
+	private double gas;
+	
+	//기본생성자-매개변수가 없는 생성자
+	
+	public Car() {
+		
+		this.num=0;
+		this.gas=0.0;
+		System.out.println("자동차가 생성되었습니다.");
+		
+		
+	}
+	
+	
+	//생성자 오버로딩-매개변수가 있는 생성자
+	public Car(int num, double gas) {
+		this();//기본생성자 쪽으로 가고 다음에 아렛문장을 수행함
+		this.num =num;
+		this.gas=gas;
+		System.out.println("차량번호가"+this.num+"이고, 연료량이"+this.gas+"인 자동차가 생성되었습니다.");
+		
+	}
+	public void show() {
+		System.out.println("차량 번호는"+num+"입니다.");
+		System.out.println("연료량은"+gas+"입니다.");
+	}
+	
+	
+
+}
+
+public class Sample06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Car car1=new Car();
+		car1.show();
+		
+		System.out.println();
+		
+		Car car2=new Car(1234,20.1234);
+		car2.show();
+		
+				
+				
+		
+	}
+
+}

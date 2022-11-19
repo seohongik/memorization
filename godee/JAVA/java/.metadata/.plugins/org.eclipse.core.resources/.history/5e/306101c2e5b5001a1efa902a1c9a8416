@@ -1,0 +1,30 @@
+//package이름은 abstractTest 입니다.
+package abstractTest;
+
+
+//class이름이 ComputerTest입니다.
+public class ComputerTest {
+
+	//main()가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Computer 객체를 생성합니다.
+		
+		//추상클래스는 구현체가 없기 때문에 추상클래스는 인스턴스화 하지 못한다. //추상클래스는 인스턴스로 생성할 수 없습니다.
+		//Cannot instantiate the type Computer
+		//Computer c1=new Computer();
+		
+		Computer c2=new Desktop();
+		//Cannot instantiate the type Laptop
+		
+		//추상클래스는 인스턴스로 생성할 수 없습니다.
+		//Computer c3=new Laptop();
+		
+		Computer c4=new MyLaptop();
+		
+		c2.display();
+		c4.display();
+		c4.typing();
+	}
+
+}

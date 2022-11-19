@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체-3</title>
+    <script>
+        var today = new Date();
+        var nowYear = today.getFullYear();
+        //document.write(nowYear);
+
+        var theDate = new Date(nowYear,11,31);
+
+        var diffDate = theDate - today;
+
+        var result = Math.ceil(diffDate/(1000*60*60*24));
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

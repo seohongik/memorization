@@ -1,0 +1,15 @@
+class Calc {
+	
+}
+
+public class CalcTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	static void change(int[] num) {
+		
+	}
+}

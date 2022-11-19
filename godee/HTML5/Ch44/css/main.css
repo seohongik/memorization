@@ -1,0 +1,97 @@
+
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+ul{
+
+    margin: 0 auto;
+    width: 950px;
+    height: 600px ;
+    
+}
+
+ul > li{
+    
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    
+    
+    
+     
+}
+
+
+ul#marcronWrap> li.pink {
+    width: 280px;
+    height: 280px;
+    transition: all 2s;
+    transform-origin: center;
+    opacity: 0.3;
+    float: left;
+    
+   
+    
+}
+
+
+
+
+ul#marcronWrap> li.pink:hover {
+    width: 0px;
+    height: 0px;
+    background-image: url(../images/image_01.jpg) norepeat;
+    float: left;
+    
+    
+  
+    
+  
+}
+
+
+ul#marcronWrap> li.yellow {
+    width: 280px;
+    height: 280px;
+    
+    background-image: url(../images/image_02.jpg);
+    float: left;
+}
+
+
+ul#marcronWrap> li.yellow:hover > img {
+    width: 280px;
+    height: 280px;
+    background-image: url(../images/image_02.jpg);
+  
+}
+
+
+ul#marcronWrap> li.green{
+    float: left;
+}
+
+.clear{clear: both;}
+
+ul#marcronWrap> li.brown{
+    float: left;
+    margin-top: unset;
+}
+
+
+ul#marcronWrap> li.lightBrown{
+    float: left;
+    margin-top: unset;
+}
+
+
+ul#marcronWrap> li.puple{
+    float: left;
+    margin-top: unset;
+}
+

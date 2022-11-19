@@ -1,0 +1,25 @@
+//패키지 이름이 dailyTest입니다.
+package dailyTest;
+
+//class이름이 StudentTest입니다.
+public class StudentTest {
+	//main()메서드가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		Student st1=new Student(1001,"Lee");
+		st1.addSubject("국어", 100);
+		st1.addSubject("수학", 50);
+		st1.showStudentInfo();
+		
+		System.out.println("=====================================================================");
+		
+		Student st2=new Student(1002,"kim");
+		st2.addSubject("국어", 70);
+		st2.addSubject("수학", 85);
+		st2.addSubject("영어", 100);
+		st2.showStudentInfo();
+		
+	}
+
+}

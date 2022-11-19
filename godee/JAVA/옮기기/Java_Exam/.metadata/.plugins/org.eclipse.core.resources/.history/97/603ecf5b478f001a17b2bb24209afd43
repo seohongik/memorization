@@ -1,0 +1,26 @@
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int i, J, SW = 0;
+		i = 0;
+		J = 0;
+		
+		do {
+			if(SW==0) {
+				i = i + 1;
+				J = J + i;
+				SW = 1;
+			} else {
+				i = i + 1;
+				J = J - i;
+				SW = 0;
+			}
+		} while (i<100);
+		
+		System.out.println("J =" +J);		
+	
+	}
+}

@@ -1,0 +1,20 @@
+//페키지 이름이 scheduler이빈다.
+package scheduler;
+//LeastJob 클래스를 정의합니다.
+//LeastJob클래스는 Scheduler인터페이스를 구현합니다.
+//현재 상담 업무가 없거나 상담대기가 가장 적은 상담원에게 배분을 합니다.
+public class LeastJob implements Scheduler {
+
+	@Override
+	public void getNextCall() {
+		// TODO Auto-generated method stub
+		System.out.println("상담 전화를 순서대로 대기열에서 가져옵니다.");
+	}
+
+	@Override
+	public void sendCallToAgent() {
+		// TODO Auto-generated method stub
+		System.out.println("현재 상담 업무가 없거나 대기가 가장 적은 상담원에게 할당합니다.");
+	}
+
+}

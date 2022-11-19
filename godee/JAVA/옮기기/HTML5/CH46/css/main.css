@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+h1 {
+    height:80px;
+    text-align:center;
+    line-height:80px;
+    margin: 50px 0 0;
+    font-size:50px;
+    font-weight:900;
+}
+
+p {
+    text-align:center;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+section#content {
+    width:1080px;
+    text-align:center;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+div.flip_box {
+    width:300px; height:300px;
+    float:left;
+    margin:30px;
+    border-radius:10px;
+    perspective:1000px;
+}
+
+
+.flip_box_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip_box_back {
+    transform: rotateY(180deg);
+  }
+
+  .flip_box img {
+      border-radius: 10px;
+  }
+  
+  
+  .flip_box:hover .flip_box_inner {
+    transform: rotateY(180deg);
+  }
+  
+
+  .flip_box_front, .flip_box_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+/* 처음 회전 하는 영역 */
+
+@keyframes flip {
+  0% {transform:rotateY(0deg);}
+  100% {transform:rotateY(360deg);}
+}
+
+.flip_box:nth-child(1) > .flip_box_inner {
+  animation: flip 1s linear 0s 2;
+}
+
+.flip_box:nth-child(2) > .flip_box_inner {
+  animation: flip 1s linear 0.3s 2;
+}
+
+.flip_box:nth-child(3) > .flip_box_inner {
+  animation: flip 1s linear 0.6s 2;
+}

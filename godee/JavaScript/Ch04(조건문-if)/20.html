@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-20</title>
+    <script>
+        /* JS 조건문 실습(2) */
+        /*
+        --요구사항-- (단위:만원)
+        만약 연봉인상이 100보다 작으면
+        "회사를 바로 그만두고 이직 준비한다." 메시지를 띄워주세요.
+        그렇지 않고, 연봉인상이 200 정도면
+        "3개월 후에 회사를 그만두고, 사업을 한다." 메시지를 띄워주세요.
+        그렇지 않고, 연봉인상이 500 정도면
+        "그냥 다녀본다." 메시지를 띄워주세요.
+        그렇지않고, 연봉인상이 1000 이상이면
+        "완전 내 회사, 평생 내 회사라는 마음으로 회사에 충성하며 다닌다." 메시지를 띄워주세요
+        */
+        var sal = window.prompt("연봉인상은?");
+        sal = parseInt(sal);
+
+        if( sal < 100 ) {
+            alert("회사를 바로 그만두고 이직 준비한다.");
+        }
+        else if ( sal >= 100 && sal <= 400 ) {
+            alert("3개월 후에 회사를 그만두고, 사업을한다");
+        }
+        else if ( sal > 400 && sal < 1000) {
+            alert("그냥 다녀본다.");
+        }
+        else if ( sal >= 1000 ) {
+            alert("완전 내 회사, 평생 내 회사라는 마음으로 회사에 충성하며 다닌다.");
+        }
+        else {
+            alert("오류");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

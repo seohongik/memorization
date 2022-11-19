@@ -1,0 +1,23 @@
+class MyMath {
+
+	long add(long num1, long num2) {
+		long result = num1 + num2;
+		return result; 
+	}
+	
+	int add(int num1 , int num2) {
+		int result = num1 + num2;
+		return result;
+	}
+	
+}
+
+
+public class MyMathMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,67 @@
+package sec01;
+
+
+
+class Car{
+	
+	private int num;
+	private double gas;
+	
+	public Car() {
+		
+		num=0;
+		gas=0.0;
+		System.out.println("자동차가 생성되었습니다.");
+		
+	}
+	
+	public void setCar(int num, double gas) {
+		this.num =num;
+		this.gas=gas;
+		System.out.println("차량번호는"+num+"으로 변경하였습니다.");
+		System.out.println("연료량은"+gas+"로 변경하였습니다.");
+	}
+	
+	public void show() {
+		
+		System.out.println("차량번호는" + num+"입니다.");
+		System.out.println("연료량은"+gas+"입니다.");
+				
+	}
+}
+
+	//자식                        //부모
+class RacingCar extends Car{
+	private int course;
+	
+	public RacingCar() {
+		int course=0;
+		System.out.println("레이싱카가 생성되었습니다.");
+		
+	}
+	
+	
+	public void setCourse(int Course) {
+	
+		this.course =course;
+		System.out.println("코스 번호를"+this.course+"입니다.");
+		
+		
+	}
+	
+	
+	
+}
+
+public class Sample01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+			//자동으로 불림
+			RacingCar reCar1= new RacingCar();
+			reCar1.setCar(10, 12.345);
+			reCar1.setCourse(7);
+	}
+
+}

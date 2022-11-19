@@ -1,0 +1,29 @@
+class Person {
+	private String name;
+	
+	void setName(String n) {
+		name = n;
+	}
+	
+	String getName() {
+		return name;
+	}
+}
+
+class Girl extends Person {
+	void print() {
+		System.out.println(getName()+"¾ç");
+	}
+}
+
+public class TestPerson {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Girl nara = new Girl();
+		nara.setName("³ª¶ó");
+		nara.print();
+
+	}
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>달력 출력하기</title>
+    <script>
+
+        var year = window.prompt("출력하고 싶은 년도는?","2020");
+        var month = window.prompt("출력하고 싶은 달은?","2");
+        var lastDay;    // 배열로 이용해서 만들자
+
+        /*
+            현재 년도가 4년주기(나머지0)이고 100년 주기는 아닌경우
+            또는 400년 주기로 윤년입니다.
+        */
+        switch(month){
+            case "1" :
+                lastDay = 31;
+                break;
+            case "2" :
+                lastDay = 28;
+                if( year%4==0 && year/100!=0 || year%400==0 )
+                    lastDay = 29;
+                break;
+            case "3" :
+                lastDay = 31;
+                break;
+            case "4" :
+                lastDay = 30;
+                break;
+            case "5" :
+                lastDay = 31;
+                break;    
+            case "6" :
+                lastDay = 30;
+                break;
+            case "7" :
+                lastDay = 31;
+                break;
+            case "8" :
+                lastDay = 31;
+                break;
+            case "9" :
+                lastDay = 30;
+                break;
+            case "10" :
+                lastDay = 31;
+                break;
+            case "11" :
+                lastDay = 30;
+                break;
+            case "12" :
+                lastDay = 31;
+                break;
+        }
+        for(var i=1; i<=lastDay; i++){
+            document.write(i+" ");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

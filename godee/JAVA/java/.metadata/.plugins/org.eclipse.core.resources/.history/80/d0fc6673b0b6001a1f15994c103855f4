@@ -1,0 +1,56 @@
+//페키지 이름이 kakaoGame입니다.
+package kakaoGame;
+
+//Muzi 클래스를 정의합니다.
+//Muzi 클래스는 Charater 클래스를 상속받습니다.
+public class Muzi extends Charater {
+
+	//디폴트 생성자를 정의합니다. 
+	public Muzi() {
+		hp=20;
+		energy=30;
+		System.out.println("무지가 생성되었습니다.");
+		printInfo();
+	}
+	
+	
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		energy+=5;
+	}
+
+	@Override
+	public void sleep() {
+		// TODO Auto-generated method stub
+		energy+=20;
+	}
+
+	@Override
+	public boolean play() {
+		// TODO Auto-generated method stub
+		energy-=10;
+		hp+=15;
+		levelUp();
+		return checkEnergy();
+	}
+
+	@Override
+	public boolean train() {
+		// TODO Auto-generated method stub
+		energy-=10;
+		hp+=20;
+		levelUp();
+		return checkEnergy();
+	}
+
+	@Override
+	public void levelUp() {
+		// TODO Auto-generated method stub
+		if(35<=hp) {
+		level++;
+		hp-=35;
+		}
+	}
+
+}

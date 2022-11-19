@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="김예찬">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>아이디찾기</title>
+    <script>
+        var userPhoneNumber = "01012345678";
+        // parseInt(userPhoneNumber);
+        console.log(userPhoneNumber);
+        function findId() {
+            var phonePattern = /(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/g;
+            var inputPhoneNumber = document.querySelector('#tfTel');
+            if (inputPhoneNumber.value == "") {
+                window.alert("핸드폰 번호를 입력해주세요.")
+                inputPhoneNumber.focus();
+            } else if (phonePattern.test(inputPhoneNumber.value) != true) {
+               window.alert("잘못된 입력입니다. 다시 입력해주시길 바랍니다.")
+               console.log(inputPhoneNumber.value);
+               inputPhoneNumber.value = "";
+               inputPhoneNumber.focus();
+               console.log(inputPhoneNumber.value)
+            } else if (inputPhoneNumber.value != userPhoneNumber) {
+                window.alert("입력하신 핸드폰 번호로 가입된 아이디가 없습니다. 다시 확인해주세요.");
+                inputPhoneNumber.value = "";
+                inputPhoneNumber.focus();
+            } else if (inputPhoneNumber.value == userPhoneNumber) {
+                console.log("scott");
+                console.log(userPhoneNumber);
+                console.log(inputPhoneNumber.value);
+                window.alert("등록된 Id를 콘솔창에서 확인하세요.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header 영역 -->
+        <header>
+            <div id="headerWrap">
+                <!-- 로고 영역 -->
+                <h1 id="logo">Kimyechan</h1>
+                <!-- //로고 영역 -->
+                <!-- 헤더메뉴 영역(일단 기본 폼만 작성) -->
+                <nav id="headerMenu">
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </nav>
+                <!-- //헤더메뉴 영역 -->
+                <div id="headerRightButton"></div>
+            </div>
+        </header>
+        <!-- //header 영역  -->
+        <div id="idPwdContainer">
+            <div id="content">
+                <!-- mainform 영역 -->
+                <form id="mainForm">
+                    <fieldset>
+                        <legend class="screen_out">아이디 찾기 입력폼</legend>
+                        <div class="box_register">
+                            <h3 class="tit_register">아이디를 잊어버렸나요?</h3>
+                            <!-- 핸드폰 번호 입력 폼 -->
+                            <div class="wrap_tf">
+                                <label for="tfTel" class="lab_write">
+                                    핸드폰</label>
+                                    <span class="txt_assist">지원자 등록에 이용한 핸드폰 번호를 입력해주세요.</span>
+                                <div id="numberBox" class="box_tf">
+                                    <input type="tel" name="number" id="tfTel" placeholder="핸드폰 번호 11자리를 입력해주세요." class="tf_write" maxlength="11">
+                                </div>
+                            </div>
+                            <!-- //핸드폰 번호 입력 폼 -->
+                        </div>
+                    </fieldset>
+                    <!-- 아이디찾기 확인 버트 영역 -->
+                    <button id="btnSubmit" type="button" class="btn_follow" onclick="findId();">아이디 찾기</button>
+                    <!-- //아이디찾기 확인 버튼 영역 -->
+                </form>
+                <!-- //mainform 영역 -->
+
+            </div>
+        </div>
+        <!-- footer 영역 -->
+        <footer>
+            <div class="footer_wrap" role="contentinfo">
+                <!-- footer 리스트 영역 -->
+                <ul>
+                    <li><a href="../Project01/agree.html" id="first">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">책임의 한계와 법적고지</a></li>
+                    <li><a href="#">회원정보 고객센터</a></li>
+                </ul>
+                <!-- //footer 리스트 영역 -->
+                <!-- address 영역 -->
+                <address>
+                    <div id="copyright">copyright c <strong>(주)Kimyechan</strong> All Right Reserved.</div>
+                </address>
+                <!-- //address 영역 -->
+            </div>
+        </footer>
+        <!-- //footer 영역 -->
+    </div>
+</body>
+</html>

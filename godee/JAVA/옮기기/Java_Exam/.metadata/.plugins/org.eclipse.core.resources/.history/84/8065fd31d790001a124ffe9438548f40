@@ -1,0 +1,22 @@
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i;
+		int L;
+		int J;
+		int k;
+		i = 0;
+		J = 1;
+		L = 1;
+		k = 0;
+		do {
+			i = i + 1;
+			J = J + i;
+			L = -1*(L);
+			k = k +(L*J);
+		} while(19);
+	}
+
+}

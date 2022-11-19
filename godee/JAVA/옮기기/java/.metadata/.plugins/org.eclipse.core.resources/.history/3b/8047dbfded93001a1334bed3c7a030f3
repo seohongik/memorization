@@ -1,0 +1,14 @@
+
+public class Ex20 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String dadada = "´Ù´Ù´Ù";
+		int num1 = 12345;
+		int[] num2 = new int[30];
+		
+		num2[0] = 1;
+		System.out.println(num2[1]);
+	}
+
+}

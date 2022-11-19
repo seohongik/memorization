@@ -1,0 +1,21 @@
+package sec02;
+
+
+
+class Car{
+	
+	
+	private int num;
+	private double gas;
+	
+	
+	
+}
+public class Sample02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

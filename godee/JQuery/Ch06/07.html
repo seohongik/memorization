@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트>-7</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+        img{width: 140px; height: 120px;}
+     </style>
+    <script>
+        $(function(){
+            $("img").bind("dblclick",function(event){
+            var $target=$(this);//??
+            //var $target=$(this);??
+            $target.width($target.width()*2);
+            $target.height($target.height()*2);
+         
+         });
+      });
+    </script>
+    
+   
+</head>
+<body>
+    
+    <img src="./images/bg1.jpg">
+
+</body>
+</html>

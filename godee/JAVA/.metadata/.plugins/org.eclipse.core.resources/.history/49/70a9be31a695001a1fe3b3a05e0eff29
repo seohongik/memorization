@@ -1,0 +1,49 @@
+//다형성
+public class CalcMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(concatenate("100","200"));
+		
+		String[] strArr= {"100","200","300"};
+		
+		System.out.println(concatenate(strArr));
+		
+	/*3*/System.out.println(concatenate(new String[] {"100","200","300"}));
+		System.out.println(new String[0]);
+		
+	}
+	
+	/*1*/static String concatenate(String str1, String str2) {
+
+			String result="";
+			result=str1+str2;
+			return result;
+		
+	}
+	
+	
+	/*2*/static String concatenate(String[] str) {
+
+			String result="";
+			
+     		
+     	 	for(int i=0; i<str.length; i++) {
+			result+=str[i];
+			}
+			
+			
+			
+			
+     	 	/*	
+		 	//어드벤스드 for
+			for(String i : str) {
+				result+=i;
+			}
+			*/
+			return result;
+		
+	}
+
+}

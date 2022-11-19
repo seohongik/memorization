@@ -1,0 +1,37 @@
+ch48 @media 규칙
+------------
+
+Ch49 반응형 웹(미디어 쿼리)
+------------------------
+
+미디어쿼리 속성
+
+   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+*width : 화면의 너비
+
+
+	height: 화면의 높이
+
+*device-width : 장치의 너비
+
+	device-height: 장치의 높이
+
+*orientation: 장치의 방향
+
+	device-aspect-ratio: 화면의 비율
+
+	color: 장치의 색상비트 
+
+	color-index: 장치에서 표현 가능한 최대 색상개수 
+
+	monochrom : 흑백장치의 픽셀 당 비트수 
+
+	resolution : 장치의 해상도 
+
+initial scale: 장치에 보여줄 해상도 크기(1.0=100%)
+
+
+-----------------

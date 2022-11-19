@@ -1,0 +1,23 @@
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int i, J;
+		i = 0;
+		J = 0;
+		
+		
+		while(i < 99) {
+			i++;
+			if(i%2== 0) {
+				J = J - i;
+			}	else {
+				J = J + i;
+			}
+		} System.out.println("J =" + J);
+
+	}
+
+}

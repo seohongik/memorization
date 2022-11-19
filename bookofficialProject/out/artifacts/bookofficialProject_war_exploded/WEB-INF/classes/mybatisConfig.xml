@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+
+<configuration>
+
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="useGeneratedKeys" value="false"/>
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
+        <setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="25"/>
+        <setting name="defaultFetchSize" value="100"/>
+        <setting name="safeRowBoundsEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
+        <setting name="localCacheScope" value="SESSION"/>
+        <setting name="jdbcTypeForNull" value="OTHER"/>
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+  </settings>
+
+
+    <typeAliases>
+        <typeAlias alias="ReportDTO" type="com.bookofficial.domain.reportDTO.ReportDTO"/>
+        <typeAlias alias="ReadDTO" type="com.bookofficial.domain.readDTO.ReadDTO"/>
+        <typeAlias alias="ReComAuthorDTO" type="com.bookofficial.domain.recomAuthorDTO.ReComAuthorDTO"/>
+        <typeAlias alias="ReComPublisherDTO" type="com.bookofficial.domain.recomPublisherDTO.ReComPublisherDTO"/>
+
+
+    </typeAliases>
+
+
+
+
+</configuration>

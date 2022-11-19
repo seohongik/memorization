@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.merchandise_list {
+    width:960px;
+    overflow:hidden;
+    margin:0 auto;
+    border: 1px solid #ccc;
+    margin: 30px auto;
+}
+
+.merchandise_list div {
+    width:200px; height:200px;
+    float:left;
+    margin: 20px;
+    box-sizing: border-box;
+    border: 1px dotted gray;
+    line-height:200px;
+}
+
+
+
+
+
+/* #merchandise01 {background-color: #92c32a;}
+#merchandise02 {background-color: #e63b67;}
+#merchandise03 {background-color: #1c8fd1;}
+#merchandise04 {background-color: #ff7612;}
+#merchandise05 {background-color: #ff7612;}
+#merchandise06 {background-color: #1c8fd1;}
+#merchandise07 {background-color: #e63b67;}
+#merchandise08 {background-color: #92c32a;} */

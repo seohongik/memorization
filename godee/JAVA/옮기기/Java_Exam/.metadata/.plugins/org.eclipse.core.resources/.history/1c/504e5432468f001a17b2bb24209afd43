@@ -1,0 +1,16 @@
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int i, J, SW;
+		i = 0;
+		J = 0;
+		SW = 0;
+		if((i%2)==0) {
+			
+		}
+	}
+
+}

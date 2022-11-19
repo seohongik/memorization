@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+
+*{margin: 0; padding: 0;}
+li{list-style-type: none;}
+a{text-decoration: none;}
+
+
+.float_bax{
+    background-color: #ccc;
+    width: 800px; 
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.float_box div{
+    width: 200px; height: 200px;
+    float: left;
+}
+.float_box .box01{background-color: #92c32a;}
+.float_box .box02{background-color: #e63b67}
+.float_box .box03{background-color: #1c8fd1}
+.float_box .box04{background-color: #ff7621}

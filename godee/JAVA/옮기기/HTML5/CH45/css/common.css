@@ -1,0 +1,11 @@
+@charset "uft-8";
+
+
+/* reset */
+* {padding:0; margin:0;}
+li {list-style-type: none;}
+a {outline:0; text-decoration: none; color:#555;}
+img {vertical-align:top; border:0;}
+
+/* common */
+

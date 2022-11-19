@@ -1,0 +1,18 @@
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean isMarried = true;
+		
+		if(!isMarried) {
+			System.out.println("πÃ»•¿‘¥œ¥Ÿ.");
+		} else {
+			System.out.println("±‚»•¿‘¥œ¥Ÿ.");
+		}
+		
+		int i;
+		System.out.println(i);
+	}
+
+}

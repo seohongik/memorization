@@ -1,0 +1,33 @@
+@charset "uft-8";
+
+/* reset */
+*{margin:0; padding:0;}
+ol, ul, li {list-style:none;}
+a {outline:0; text-decoration:none; color:#555;}
+img {vertical-align:top; border:0;}
+
+/*  common */
+body {font:12px/1.6 arial;color:#555;}
+
+div {
+    width:200px; height:200px;
+    margin: 150px 50px;
+    border: 1px solid #000;
+    float:left;
+    perspective:
+}
+
+div p {
+    width:100%; height:100%;
+    background: blue;
+    opacity:0.3;
+    transform:rotateY(50deg);
+}
+
+div:nth-child(1) {
+    perspective: 150px;
+}
+
+div:nth-child(3) {
+    perspective: 800px;
+}

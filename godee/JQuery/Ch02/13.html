@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터 -13</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+        .spotLight{background-color: #ff0;}
+        .redText{color: #f00;}
+        .blueText{color:#00f;}
+        .largeText{font-size: 39px;}
+        .italicText{font-style: italic;}
+        .box{border: 3px solid #f00;}
+        
+    </style>
+
+    <script>
+
+        var output = function(selector){
+            resultText="";
+            $(selector).each(function(){
+                resultText += $(this).text()+"\n";//this가 받는건 selector의 0번째 값 부터 //만약 selector을 this대신 쓴다면 번지 전체를 받는다.
+            });
+            console.log(resultText+"\n");
+        }
+           
+       $(document).ready(function(){
+
+        $("span[id]").addClass("spotLight");
+        output("span[id]");
+        $("span[id='simplexText1']").addClass('blueText');
+        output("span[id='simplexText1']");
+        $("span[id!='simplexText1']").addClass('largeText');
+        output("span[id!='simplexText1']");
+        $("span[id^='complex']").addClass("italicText");
+        output("span[id^='complex']");
+        $("span[id$='Text1']").addClass("box");//~끝나는
+        output("span[id$='box']");
+        $("span[id*='Text']").addClass('redText');
+        output("span[id*='Text']");
+       });
+            
+
+
+     </script>
+</head>
+<body>
+    <span id='simplexText1'>simple</span>
+    <span class='simplexText2'>jQuery</span>
+    <span id='complexText1'>basic</span>
+    <span id='complexText2'>example</span>
+    <span id='complex'>code</span>
+</body>
+</html>

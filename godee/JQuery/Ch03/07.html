@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에트리뷰트-4</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+        .redText{color: red;}
+        
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('p').click(function(){
+                $(this).toggleClass('redText');
+               /*if($(this).hasClass('redText')){
+                    $(this).removeClass('redText')
+                }else{
+                    $(this).addClass('redText')
+                }*/
+            });
+        });
+       
+    </script>
+</head>
+<body>
+ 
+    <p class='redText'> one</p>
+    
+
+</body>
+</html>

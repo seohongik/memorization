@@ -1,0 +1,12 @@
+
+public class Ex16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		if(args.length!=3) {
+			System.out.println("»ç¿ë¹ý : Num1 Operation NUM2");
+			System.exit(0);
+		}
+	}
+
+}

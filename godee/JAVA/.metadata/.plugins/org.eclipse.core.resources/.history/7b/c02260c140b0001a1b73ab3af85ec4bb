@@ -1,0 +1,26 @@
+//패키지 이름이 hidigTest입니다.
+package hidingTest;
+
+//클래스 이름이 studentTest입니다.
+public class StudentTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		//stuendtA객체를 생성 합니다.
+		
+		Student studentA=new Student();
+		
+		//studentA 객에체 "라이언"이라는 이름을 지정합니다.
+		//The field Student.studentName is not visible 라는 오류가 발생합니다.
+		//studentA.studentName="라이언";
+		
+		studentA.setStudentName("라이언");
+		//studentA 객체가 가지고 있는 학생 이름을 출력합니다.
+		System.out.println(studentA.getStudentName());
+		
+		
+	}
+
+}

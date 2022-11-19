@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에트리뷰트-4</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+         
+        .redText{color: red;}
+        .blueText{color: blue;}
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('#remove').click(function(){
+                $('p').removeClass('redText');
+               // $('p').removeClass('redText');
+                
+            });
+            $('#change').click(function(){
+                $('p').removeClass('redText').addClass('blueText');
+            });
+        
+        });
+    
+    </script>
+</head>
+<body>
+    <button id='remove'>삭제</button>
+    <button id='change'>변경</button>
+    <p class='redText'> one</p>
+    <p class='blueText'>two</p>
+    <p>three</p>
+    <p>four</p>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+package sec09;
+
+class Car{
+	
+	private int num;
+	private double gas;
+	
+	private String name;
+	
+	public Car() {
+		
+		num=0;
+		gas=0.0;
+		name="홍길동";
+		System.out.println("자동차가 생성되었습니다.");
+		
+		
+	}
+	
+public void show() {
+		
+		System.out.println("차량번호는" +num+"입니다.");
+		System.out.println("연료량은"+gas+"입니다.");
+		
+}
+	
+	
+	public void setCar(int num, double gas) {
+		
+		this.num =num;
+		this.gas = gas;
+		System.out.println("차량번호는"+num+"으로,연료량은"+gas+"입니다.");
+	}
+	
+
+}
+
+
+
+public class Sample09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Car[] cars;//객체 배열
+		
+		//cars = new Car[3];
+		
+		Car[] cars= new Car[3];
+		
+		for(int i=0; i<cars.length; i++) {
+			
+			cars[i]=new Car();
+			
+			
+		}
+			cars[0].setCar(1, 10.12);
+			cars[1].setCar(2, 30.23);
+			cars[2].setCar(3, 30.34);
+			
+			for(int i=0; i<cars.length; i++) {
+				
+				cars[i].show();
+			}
+	}
+
+}

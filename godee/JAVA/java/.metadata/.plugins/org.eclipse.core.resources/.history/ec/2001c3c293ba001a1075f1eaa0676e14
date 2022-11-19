@@ -1,0 +1,16 @@
+package ch18;
+
+public class Member {
+	
+	
+	private int memberId;
+	private String memberName;
+	
+	public Member(int menberId,String memberName) {
+		this.memberId=memberId;
+		this.memberName=memberName;
+		
+		
+	}
+
+}

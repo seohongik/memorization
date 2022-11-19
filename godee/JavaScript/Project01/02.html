@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>name값 가져오기</title>
+    <script>
+
+        function check_name(){
+            // name으로 가져올때는 1개일 뿐이라도 배열형식으로 지정(문법)
+            var result = document.getElementsByName("userName")[0].value;
+            console.log(result);
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" name="userName">
+    <!-- 함수 호출 후에 세미콜론(;) 기입 -->
+    <button onclick="check_name();">중복 확인</button>
+
+</body>
+</html>

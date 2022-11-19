@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-position 속성으로 배경 이미지 위치 변경하기</title>
+    <style type="text/css">
+        p{
+            background-color: yellow;
+            background-image: url("./images/flower.jfif");
+            background-repeat:no-repeat;
+            border:1px soild black;
+            padding:10px;
+            width:500px; height: 500px;
+        }
+
+        .keyword{ background-position: right bottom;}
+        .lenght{ background-position: 100px 50px;}
+    </style>
+</head>
+<body>
+    
+    <h1>배경 이미지의 위치 변경</h1>
+    <p class="keyword">요소의 배경 이미지의 위치를 지정하는 경우에는 키워드를 이용하여 background-position에 위치를 지정할 수 있습니다. 이때 가로 위치는 right 세로 위치는 bottom의 값을 공백으로 구분하여 지정하면 박스 오른쪽 하단에 배경 이미지가 위치하게 됩니다.</p>
+    <p class="lenght">배경 이미지의 위치는 키워드 방식이 아닌 길이 단위로도 지정할 수 있습니다. 이때 가로 위치와 세로 위치를 공백으로 구분하여 선언하면 해당 배경 이미지는 그 길이 만큼 x좌표와 y좌표가 만나는 지점으로 부터 위치하게 됩니다.</p>
+</body>
+</html>

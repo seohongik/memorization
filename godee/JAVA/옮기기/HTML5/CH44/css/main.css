@@ -1,0 +1,111 @@
+@charset "uft-8";
+
+
+/* title(h1) */
+
+div#wrap > h1 {
+    width:1000px; height:100px;
+    margin:50px auto 20px;
+    line-height: 100px;
+    color: black;    
+}
+
+
+
+/* main */
+
+div#wrap > section#main {
+    width:780px;
+    margin: 0 auto;
+    position: relative;
+    overflow:hidden;
+}
+
+#main div.main_macaron_feature {
+    width:200px; height:200px;
+    background-color: firebrick;
+    float:left;
+    text-align: center;
+    margin:30px;
+    border-radius: 100px;
+    box-sizing: border-box;
+    border:15px solid rgba(226, 207, 145, 0.3);
+    position:relative;
+}
+
+div.main_macaron_feature > .main_occurs {
+    width:100%; height:100%;
+    text-align: center;
+    position: absolute;
+    left:0; top:0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background-color:rgba(255, 165, 0, 0);
+    transition:all 1s ease 0s;
+    visibility:hidden;
+}
+
+div.main_macaron_feature:hover > .main_occurs {
+    background-color:rgba(255, 165, 0, 0.4);
+    visibility:visible;
+}
+
+div.main_macaron_feature:hover > .main_occurs > h3 {
+    color: rgb(255, 255, 255);
+}
+div.main_macaron_feature:hover > .main_occurs > p {
+    color: rgb(255, 255, 255);
+}
+div.main_macaron_feature:hover > .main_occurs > p > em {
+    color:rgb(0, 0, 255);
+}
+
+div.main_macaron_feature:hover > div.main_occurs > p::before {
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+div.main_occurs > h3 {
+    font-size:20px;
+    color: rgb(255, 255, 255, 0);
+    margin: 40px 0 20px;
+    transition:all 1s ease 0s;
+}
+
+div.main_occurs > p {
+    color: rgb(255, 255, 255, 0);
+    transition:all 1s ease 0s;
+}
+
+div.main_occurs > p > em {
+    color:rgb(0, 0, 255, 0);
+    transition:all 1s ease 0s;
+}
+
+div.main_occurs > p::before {
+    display:block;
+    content:""; height:10px;
+    width:160px;
+    margin:0 auto;
+    border-top: 1px solid rgb(255, 255, 255, 0);
+    text-align: center;
+    transition:all 1s ease 0s;
+}
+
+div.main_macaron_feature#macaron1 {
+    background-image: url("../images/image_01.jpg");
+}
+div.main_macaron_feature#macaron2 {
+    background-image: url("../images/image_02.jpg");
+}
+div.main_macaron_feature#macaron3 {
+    background-image: url("../images/image_03.jpg");
+}
+div.main_macaron_feature#macaron4 {
+    background-image: url("../images/image_04.jpg");
+}
+div.main_macaron_feature#macaron5 {
+    background-image: url("../images/image_05.jpg");
+}
+div.main_macaron_feature#macaron6 {
+    background-image: url("../images/image_06.jpg");
+}

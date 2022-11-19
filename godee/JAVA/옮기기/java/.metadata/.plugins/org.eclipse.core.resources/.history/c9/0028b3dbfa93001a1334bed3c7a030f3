@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Ex23 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 학사관리시스템(2)
+		
+		Scanner sc = new Scanner(System.in);
+		String[] subject = {"국어", "영어", "수학"};
+		
+		System.out.print("학생 수를 입력해주세요 : ");
+		int studentNum = sc.nextInt();
+		
+		int[][] studentScore = new int[studentNum][3];
+		int[] sum = new int[studentNum];
+		double[] avg = new double[studentNum];
+		
+		for(int i=0; i<studentScore.length; i++) {
+			for(int j=0; j<studentScore[i].length; j++) {
+				System.out.print((i+1)+"번째 학생의 "+subject[j]+"의 점수를 입력해주세요");
+				studentScore[i][j] = sc.nextInt();
+				sum[i] += studentScore[i][j];
+			} avg[i] = (double) sum[i]/3;
+		} 
+		
+		System.out.println("  번호     국어     영어     수학     총점     평균"); // 각 과목명을 적어줍니다.
+		System.out.println("================================"); // 라인을 그어줍니다.
+		for(int k=0; k<studentScore.length; k++) {
+				System.out.printf("%3d", k+1);
+			for(int l=0; l<studentScore[k].length; l++) {
+				System.out.printf("%5d", studentScore[k][l]);
+			} System.out.printf("%5d", sum[k]);
+			  System.out.printf("%6.1f", avg[k]);
+			  System.out.println();
+		}System.out.println("================================");
+		System.out.print("총점:");
+		for(int i=0; i<3; i++) {
+			int allSum =0; // 각각의 과목의 합을 담는 값을 담는 변수를 만듭니다.
+			for(int j=0; j<studentScore.length; j++) {
+				 allSum += studentScore[j][i];
+			} System.out.printf("%5d", allSum); // 각각의 변수를 출력합니다.
+		}
+			
+		}
+	}

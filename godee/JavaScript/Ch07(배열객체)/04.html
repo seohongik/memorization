@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체-4</title>
+    <script>
+        var greenLine = ["사당", "교대", "방배", "강남"];
+        var yellowLine = ["미금", "정자", "모란", "수서"];
+        
+        var twoLine = greenLine.concat(yellowLine);     //greenLine을 기준으로 yellowLine을 연결
+        document.write(twoLine,"<br>");
+
+        greenLine.pop();                // 마지막 데이터를 뺍니다.(강남X)
+        document.write(greenLine,"<br>");
+
+        greenLine.push("삼성");         // 데이터를 입력합니다.(삼성)
+        document.write(greenLine,"<br>");
+
+        greenLine.shift();              // 맨 앞(첫 번째)의 데이터를 뺍니다.(사당)
+        document.write(greenLine,"<br>");
+
+        greenLine.unshift("신도림");    // 맨 앞에 데이터를 입력합니다(신도림)
+        document.write(greenLine,"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

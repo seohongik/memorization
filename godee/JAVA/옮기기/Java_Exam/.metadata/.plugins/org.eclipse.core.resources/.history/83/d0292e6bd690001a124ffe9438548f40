@@ -1,0 +1,18 @@
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i;
+		int J;
+		int k;
+		int K;
+		i = 0;
+		L = -1;
+		do {
+			i = i + 1;
+			L = 
+		}
+	}
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현 객체-3</title>
+    <script>
+        var userPhone = window.prompt("당신의 핸드폰 번호는?");
+        // (010|011|016) : 010 또는 011 또는 016로 시작하도록 패턴을 생성합니다.
+        // d{3,4} : 숫자 3개부터 4개까지 작성하도록 패턴을 생성합니다.
+        // d{4} : 마지막 부분은 숫자 4개가 올 수 있도록 패턴을 생성합니다.
+        var reg = /^(010|011|016)\d{3,4}\d{4}$/;
+        
+        while(true){
+            if(reg.test(userPhone))
+                break;
+            window.alert("핸드폰 입력 형식이 잘못되었습니다.");
+            userPhone = window.prompt("당신의 핸드폰 번호는?");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+class TV {
+	
+	//필드(속성)
+	String color;
+	boolean power;
+	int channel;
+
+	
+	
+	//메서드(기능)
+	public boolean isPower() {
+		return power;
+	}
+	public void setPower(boolean power) {
+		this.power = power;
+	}
+	
+}
+
+
+public class TVTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+}

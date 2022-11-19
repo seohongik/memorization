@@ -1,0 +1,110 @@
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+
+
+ul{
+
+    margin: 0 auto;
+    width: 960px;
+    height: 1000px;
+    background-color: red;
+  
+    box-sizing: border-box;
+    
+}
+
+ul> li{
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    
+   
+}
+
+
+
+ul>li.pink> div.color{
+    width: 240px;
+    height: 240px;
+    background: white;
+    border-radius: 50%;
+    transition: all 3s;
+    opacity: 1;
+   
+    
+    left: 100px; top: 100px;
+}
+
+ul>li.pink> div.color:hover{
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+
+   
+}
+
+
+ul> li div.backImg{
+    width: 230px;
+    height: 230px;
+    background-image: url(../images/image_01.jpg);
+    border-radius: 50%;
+    float: left;
+    border: 10px solid rgba(255,255, 255, .5);
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+ul#marcronWrap> li.yellow {
+    width: 280px;
+    height: 280px;
+    float: left;
+}
+
+
+ul#marcronWrap> li.yellow:hover > img {
+    width: 280px;
+    height: 280px;
+    
+  
+}
+
+
+ul#marcronWrap> li.green{
+    float: left;
+}
+
+.clear{clear: both;}
+
+ul#marcronWrap> li.brown{
+    float: left;
+    margin-top: unset;
+}
+
+
+ul#marcronWrap> li.lightBrown{
+    float: left;
+    margin-top: unset;
+}
+
+
+ul#marcronWrap> li.puple{
+    float: left;
+    margin-top: unset;
+}
+

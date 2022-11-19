@@ -1,0 +1,28 @@
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int i = 0;
+		float J = 0;
+		
+	
+		//System.out.println(5/2); java는 자동 형변환이 일어나서 정수/정수의 연산은 몫을 나타낸다. 
+		//System.out.println((int) 5/2); 위에 값과 동일한 값이 나타나 비교연산이 불가능함.
+		//System.out.println((float)4/2 == 4/2); true
+		//System.out.println((float)5/2 == 5/2); false 위에 식과 함께 비교 연산이 가능함으로 연산할 때 i 값을 float로 형변환 해준다.
+		
+		do {
+			i++;
+			// 정수형 i를 float형으로 명시적 형변환을 해준다.
+			if((int)(i/2) == (float)i/2) {
+				J = J + ((float)i/((float)i+1));
+			} else {
+				J = J - ((float)i/((float)i+1));
+			}
+		} while(i<99);
+		System.out.printf("J=%f ", J);
+	} 
+
+}

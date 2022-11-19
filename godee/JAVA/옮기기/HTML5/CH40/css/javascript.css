@@ -1,0 +1,6 @@
+div.list h2 {
+    /* font-variant:small-caps; */
+    text-transform:uppercase;
+    font-size:30px;
+    color:orange;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-18</title>
+    <script>
+        /* 사용자 아이디와 사용자 패스워드를 입력받은 후 
+        1) 사용자 아이디가 "admin"이고 패스워드가 1234인 경우에만 "환영합니다." 라는 메시지를 출력해주세요.
+        2) 만약 사용자 아이디가 다른 경우 "사용자 아이디를 잘못 입력했습니다."라고 메시지를 출력하고, 
+        3) 패스워드가 다른 경우"패스워드를 잘못 입력했습니다." 라고 메시지를 출력해주세요. */
+
+        var userId = window.prompt("아이디를 입력해주세요.","");
+        var userPwd = window.prompt("패스워드를 입력해주세요.","");
+
+        if( userId == "admin" && userPwd == "1234") {
+            alert("환영합니다.");
+        }
+        else if ( userId != "admin") {
+            alert("사용자 아이디를 잘못 입력했습니다.");
+        }
+        else if ( userId == "admin" && userPwd != "1234") {
+            alert("패스워드를 잘못 입력했습니다.");
+        }
+        else {
+            alert("아이디와 패스워드를 확인해주세요.");
+        }
+
+        // 1번 답안
+        // if( userId == "admin" && userPwd == "1234") {
+        //     alert("환영합니다.");
+        // }
+        // else if ( userId != "admin" ) {
+        //     alert("사용자 아이디를 잘못 입력했습니다.");
+        // }
+        // else {
+        //     alert("패스워드가 잘못 입력했습니다.");
+        // }
+
+        //2번 답안
+        if( userId == "admin" && userPwd == "1234") {
+            alert("환영합니다.");
+        }
+        else if ( userId == "admin" ) {
+            alert("패스워드가 잘못 입력했습니다.");
+        }
+        else {
+            alert("사용자 아이디를 잘못 입력했습니다.");
+        }
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

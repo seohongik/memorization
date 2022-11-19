@@ -1,0 +1,49 @@
+//패키지 이름이 kakaoGame입니다
+package kakaoGame;
+
+//Ryan 클래스를 정의합니다.
+//Ryan 클래스를 Charater 클래스를 상속 받습니다. 
+public class Ryan extends Charater {
+	
+	//디폴트 생성자를 정의합니다
+	Ryan(){
+		
+		hp=30;
+		energy=50;
+		System.out.println("라이언이 생성되었습니다");
+		printInfo();
+		
+	}
+	
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sleep() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean play() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean train() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void levelUp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

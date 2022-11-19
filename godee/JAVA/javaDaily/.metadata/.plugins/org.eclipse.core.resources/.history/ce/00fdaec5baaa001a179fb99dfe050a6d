@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+
+class Calc{
+	
+	void sum(int a,int b,int c) {
+		
+		System.out.println(a+b+c);
+		
+		
+	}
+}
+
+public class Ex01 {
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+
+			String first = sc.nextLine();
+			String second = sc.nextLine();
+			String third = sc.nextLine();
+		
+		int a=Integer.parseInt(first);
+		int b=Integer.parseInt(second);
+		int c=Integer.parseInt(third);
+			
+		Calc calc1= new Calc();	
+		calc1.sum(a, b, c);
+	}
+}

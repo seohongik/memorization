@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="com.bookofficial.mapper.reportMapper">
+
+
+
+    <insert id="reportInsert"  parameterType="ReportDTO">
+        <selectKey keyProperty="report_id" resultType="int" order="BEFORE">
+            select report_id.nextval FROM DUAL
+        </selectKey>
+
+        insert into report_tbl (report_id,report_subject,report_content,report_comment,hashTage) values (#{report_id},#{report_subject},#{report_content},#{report_comment},#{hashTage})
+
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bookofficial.mapper.reComMapper">
+
+
+
+    <insert id="reComAuthorInsert"  parameterType="ReComAuthorDTO">
+
+        <selectKey keyProperty="recom_author_id" resultType="int" order="BEFORE">
+            select recom_author_id.nextval FROM DUAL
+        </selectKey>
+
+        insert into recom_author_book_tbl(recom_author_id,recom_author_author ,recom_author_title,recom_author_publish,recom_author_imgUrl) values (#{recom_author_id},#{recom_author_author} ,#{recom_author_title},#{recom_author_publish},#{recom_author_imgUrl})
+
+    </insert>
+
+
+    <insert id="reComPublisherInsert"  parameterType="ReComPublisherDTO">
+
+
+        <selectKey keyProperty="recom_publisher_id" resultType="int" order="BEFORE">
+            select recom_publisher_id.nextval FROM DUAL
+        </selectKey>
+
+        insert into recom_publisher_book_tbl(recom_publisher_id,recom_publisher_author ,recom_publisher_title,recom_publisher_publish,recom_publisher_imgUrl) values (#{recom_publisher_id},#{recom_publisher_author},#{recom_publisher_title},#{recom_publisher_publish},#{recom_publisher_imgUrl})
+
+    </insert>
+
+
+
+</mapper>

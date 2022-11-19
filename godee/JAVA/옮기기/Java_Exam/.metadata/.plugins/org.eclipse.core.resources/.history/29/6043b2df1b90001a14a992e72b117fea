@@ -1,0 +1,24 @@
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		변수 i : 1씩 증가되는 숫자가 저장될 변수,  즉 i는 1,2,3,...,19까지 차례로 변경된다.
+//        J : i가 누적되어 저장될 변수, 즉 1,2,4,7,11,..까지의 차례로 변경된다.
+//        k : J가 누적되어 저장될 변수, 즉 1+2+4+7+11+16+22..의 계산 값이 저장된다.
+//        [실행결과] k= 1350
+
+		int i, J, k;
+		i = 0;
+		J = 1;
+		k = 0;
+		do {
+			i = i + 1;
+			J = J + (i-1);
+			k = k + J;
+		} while(i<3);
+		System.out.println("k = "+ k);
+		System.out.println("J = "+J);
+	} 
+
+}

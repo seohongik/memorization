@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-repeat 속성으로 배경 이미지 반복 여부 변경하기</title>
+    <style type="text/css">
+    
+        p{background-color: yellow;
+        background-image: url("./images/flower.jfif");
+            border: 1px solid black;
+            padding:2em;
+            width: 300px; height: 600px;
+        }
+
+        .repeat{background-repeat: repeat;}
+        .repeatX{background-repeat: repeat-x;}
+        .repeatY{background-repeat: repeat-y;}
+        .norepeat{background-repeat: no-repeat;}
+    </style>
+</head>
+<body>
+    <h1>배경 이미지의 반복여부 변경</h1>
+    <p class="repeat">요소의 배경 이미지를 반복하고자 할 때는 background-repeat속성에 repeat 값을 지정하면 됩니다.</p>
+    <p class="repeatX">요소의 배경 이미지를 X축으로 반복하고 할 때는 background-repeat속성에 repeat-x값을 지정하면 됩니다.</p>
+    <p class="repeatY">요소의 배경 이미지를 Y축으로 반복하고 할 때는 background-repeat속성에 repeat-y값을 지정하면 됩니다.</p>
+    <p class="norepeat">요소의 배경 이미지를 반복하여 출력하지 않고자 할 때는 background-repeat속성에 no-repeat값을 지정하면 됩니다.</p>
+</body>
+</html>

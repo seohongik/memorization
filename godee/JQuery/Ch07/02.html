@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에니메이션-1</title>
+    
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="./js/prefixfree.min.js"></script>
+    <style>
+         span{display: none;}
+
+    </style>
+
+    <script>
+        $(function () {
+          $("button:eq(0)").click(function(){
+            $("span:first").toggle();
+          });
+
+          $("button:eq(1)").click(function(){
+            $("span:last").toggle("slow",function(){
+                $(this).css("background", "yellow");
+            });
+          });
+    });
+
+    </script>
+</head>
+<body>
+    <button>show/hide</button>
+    <span>hello</span>
+    <button>show/hide slow</button>
+    <span>good bye</span>
+</body>
+</html>

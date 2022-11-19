@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bookofficial.mapper.readMapper">
+
+    <insert id="readListInsert"  parameterType="ReadDTO">
+        <selectKey keyProperty="read_id" resultType="int" order="BEFORE">
+            select read_id.nextval FROM DUAL
+        </selectKey>
+
+
+        insert into read_book_tbl (read_id,read_author,read_title,read_isbn,read_publish,read_imgUrl) values (#{read_id},#{read_author},#{read_title},#{read_isbn},#{read_publish},#{read_imgUrl})
+
+    </insert>
+
+
+
+
+</mapper>

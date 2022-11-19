@@ -1,0 +1,43 @@
+
+public class CalcMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	String[] strArr = {"100", "200", "300"};
+	System.out.println(concatenate(strArr));
+	
+	System.out.println(concatenate(new String[] {"100", "200", "300"}));
+	System.out.println(concatenate(",",new String[] {"100", "200", "300"}));
+	System.out.println("["+concatenate(",",new String[] {"1","2"})+"]");
+	System.out.println("["+concatenate(new String[] {"1","2"})+"]");
+	}
+
+	static String concatenate(String str1, String...str2) {
+		String result="";
+		for(String i : str2) {
+			result += i+str1;
+		}
+		
+		return result;
+	}
+	
+	static String concatenate(String str1, String str2) {
+		String result="";
+		result = str1+str2;
+		return result;
+	}
+	
+	static String concatenate(String...str) {
+		String result="";
+//		for(int i=0; i<str.length; i++) {
+//			result += str[i];
+//		}
+		for(String i : str) {
+			result += i;
+		}
+		return result;
+	}
+
+}

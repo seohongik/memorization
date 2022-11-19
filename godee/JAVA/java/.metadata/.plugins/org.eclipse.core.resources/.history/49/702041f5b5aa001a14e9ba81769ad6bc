@@ -1,0 +1,13 @@
+package sec01;
+
+public class sample01 {
+
+	public static void main(String[] args) {		
+		// TODO Auto-generated method stub
+		String str="Hello";
+		char ch1=str.charAt(0);
+		
+
+	}
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-20</title>
+    <script>
+        // JS 조건문 실습(2)
+        var salaryRaise = window.prompt("연봉을 입력해주세요", "");
+        salaryRaise = parseInt(salaryRaise);
+        if (salaryRaise < 100) {
+            alert("회사를 바로 그만두고 이직 준비한다.");
+        } else if (salaryRaise == 200) {
+            alert("3개월 후에 회사를 그만두고, 사업을 한다.");
+        } else if (salaryRaise == 500) {
+            alert("그냥 다녀본다.");
+        } else if (salaryRaise >= 1000) {
+            alert("완전 내 회사, 평생 내 회사라는 마음으로 회사에 충성하며 다닌다.");
+        }
+
+        // if (salaryRaise >= 100 && salaryRaise < 1000) {
+        //     if(salaryRaise >= 100 && salaryRaise < 400) {
+        //             alert("3개월 후에 회사를 그만두고, 사업을 한다.");
+        //         } else {
+        //             if (salaryRaise >= 400 && salaryRaise < 1000) {
+        //                 alert("그냥 다녀본다.");
+        //             } else ;
+        //         }
+        // } else {
+        //     if (salaryRaise < 100) {
+        //         alert("회사를 바로 그만두고 이직 준비한다.");
+        //     } else {
+        //         alert("완전 내 회사, 평생 내 회사라는 마음으로 회사에 충성하며 다닌다.");
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

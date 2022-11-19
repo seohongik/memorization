@@ -1,0 +1,98 @@
+/*reset*/
+@charset "utf-8";
+
+/*common*/
+*{margin: 0; padding: 0;}
+body{font-size: 12px;
+font-family: 'Verdana',"gulim","굴림";}
+a{text-decoration: none; outline: none;}
+ul,ol,li{list-style: none;}
+img{vertical-align: top;}
+
+/*로그인창 레이아웃 */
+
+/*로그인 인풋*/
+div#wrap{
+    width: 420px;
+    height: 993px;
+    margin: 0 auto;
+}
+/*로그인창 헤더*/
+
+div#wrap >h1#header{
+    text-align: center;
+    
+}
+
+
+div#wrap> h1#header{
+    padding : 70px 0 50px 0;
+
+}
+
+
+
+/*로그인 아이디 입력 창*/
+form#inputWrap{
+    width: 420px;
+    height: 327px;
+}
+
+
+/*로그인 페스워드 입력 창*/
+
+
+
+/*로그인 버튼*/
+form#inputWrap > h2{
+    width: 0px;
+}
+
+
+
+form#inputWrap  h3{
+    width: 400px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+   
+}
+
+label.space{
+    display: inline-block;
+ 
+    
+}
+
+
+
+/*페이지 이동*/
+ul#registerListWrap{
+    width: 400px;
+    height: 80px;
+    box-sizing: border-box;
+    margin-left: 60px;
+    
+    
+    
+    
+}
+
+
+ul#registerListWrap > li{
+    border-right: 1px solid black ;
+ 
+}
+
+
+/*아이디 찾기*/
+
+
+
+
+
+
+/*idfind pwdfind에서 로고 누르면 로그인 페이지로 이동하게 만들기
+
+로그인페이지에서 링크 누르면 idfidnd pwdfind 가기*/

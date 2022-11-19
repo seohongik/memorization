@@ -1,0 +1,46 @@
+package sec02;
+
+class Car{
+	
+	private int num;//캡슐화 -정보은닉 - 인포메이션 하이딩
+	private double gas;
+	
+	public void show() {
+		System.out.println("차량 번호는"+num+"입니다.");
+		System.out.println("연료량은"+gas+"입니다.");
+	}
+	
+	public void SetNumGas(int num,double gas) {
+		if(gas>0&&gas<1000) {
+	
+		this.num=num;
+		this.gas=gas;
+		
+		System.out.println("차량 번호는"+this.num+"으로, 연료량을"+this.gas+"로 바꾸었습니다.");
+		
+		}else {
+			//this.gas는 초기값을 반환하므로 0.0
+			//gas는 SetNumGas에서 쓰인 파라미터 값
+			System.out.println(gas+"는 올바른 연료량이 아닙니다.");
+		}
+	
+	}
+	
+}
+
+public class Sample02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Car car1=new Car();//new를 쓰면 기본생성자가 불린다.
+		
+		car1.show();
+		/*int num=100; 필스도 선언하는 것은 잘 못된 예시 set메소드를 썼기 때문에
+		double gas=-12.345;*/
+		car1.SetNumGas(100, -12.425);//set메소드로 인자값을 바꾼다
+		car1.show();//함수 호출
+		
+	}
+
+}

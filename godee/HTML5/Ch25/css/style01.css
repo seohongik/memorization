@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* 공통 영역*/
+*{margin: 0; padding: 0;}
+li{ list-style: none;}
+a{text-decoration: none;}
+
+/* header 영역*/
+
+#header{ 
+    width: 800px;
+    height: 200px;
+    background-color: #a2d078;
+    margin: 0 auto;
+}
+/* content 영역*/
+
+#content{
+        width: 800px; height: 700px;
+        background-color: yellow;
+        margin: 10px auto;
+        overflow: hidden;
+        
+}
+/*left_col  영역*/
+#content > #left_col { 
+    width: 200px;
+    height: 700px;  
+    float: left;
+    /*margin-right: 50px;*/ 
+    background-color: red;
+    
+}
+/*right_col*/
+#content > #right_col{
+    width: 550px;
+    height: 700px;
+    background-color: blue;
+    float: right;
+    
+ 
+}
+
+/* footer 영역*/
+    #footer{
+        width: 800px; height: 200px;
+        background-color: yellowgreen;
+        margin: 10px auto;
+    }

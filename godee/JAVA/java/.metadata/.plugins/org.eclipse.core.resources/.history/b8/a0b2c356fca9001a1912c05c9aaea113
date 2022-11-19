@@ -1,0 +1,37 @@
+package sec05;
+
+class Car{
+	
+	private int num;
+	private double gas;
+	
+	//기본생성자
+	
+	public Car() {
+		
+		this.num=0;
+		this.gas=0.0;
+		System.out.println("자동차가 생성되었습니다.");
+		
+		
+	}
+	
+	
+	//생성자 오버로딩
+	public Car(int num, double gas) {
+		
+		
+	}
+	
+	
+	
+}
+
+public class Sample05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

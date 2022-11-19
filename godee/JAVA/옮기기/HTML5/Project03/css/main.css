@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+div#banner {
+    width:1100px;
+    height: 300px;
+    line-height:300px;
+    box-sizing: border-box;
+    border: 1px dotted gray;
+    margin: 40px 0;
+}
+
+#mainList {
+    width: 1100px;
+    height: 275px;
+}
+
+#mainList li {
+    width: 275px;
+    height: 275px;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    line-height: 275px;
+    text-align: center;
+}
+
+/* 275 */

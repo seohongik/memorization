@@ -1,0 +1,54 @@
+1)jdk 설치하기
+
+	jdk -10.0.2_window-x64_bin 관리자 권한으로 실행
+
+	next 또는 다음 버튼 클릭
+
+
+2)apach-tomcat 서버 설치하기
+
+	C 드라이브에 tomcat9폴더를 생성
+
+	apach-tomcat-9.0.24.exe 관리자 권한을 실행
+
+	I agree 버튼 클릭
+
+	next 버튼 클릭
+
+	server shutdown port : 8005
+
+	HTTP/1.1 CONNECTO PORT :8090
+
+	user name : admin
+	password admin
+
+	next 버튼 클릭
+
+	browser 버튼 클릭 경로를 C: \tomcat9\ 
+
+	인스톨 버튼 클릭
+
+	피니시 버튼 클릭
+
+
+3 내 소스코드를 웹서버에 등록하기
+
+	project01 폴더를
+	c-> tomcat9 ->webapps 폴더에 복사 붙여넣기 합니다. 
+
+4 비주얼 스튜디오 코드 환경설정
+
+	비쥬얼 스튜디오 작업영역 폴더추가 
+
+	독타입 위에
+	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+	
+5번째 톰캣 서버 실행
+
+
+C:\tomcat9\bin로 이동
+
+tomcat9.exe 를 관리자 관한으로 실행
+
+-----------------------
+http://localhost:8090/Project01/agree.jsp

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수-11</title>
+    <script>
+        function print99Dan(start, end) {
+            for (var i = start; i <= end; i++){
+                document.write("<h1>"+ i + "단 출력 </h1>");
+                for (var m = 1; m <= 9; m++) {
+                    document.write(i + "*" + m + "=" + i*m + "<br>");
+                }
+                document.write("<br>");
+            }
+           
+        }
+
+        print99Dan(2, 15);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

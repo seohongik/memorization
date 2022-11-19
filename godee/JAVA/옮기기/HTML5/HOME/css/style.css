@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/* --------- 전체 영역 --------- */
+*{padding:0; margin:0; text-align: center;}
+li {list-style-type: none;}
+a {text-decoration: none;}
+body {background-color: whitesmoke;}
+/* --------- header 영역 --------- */
+#headerwrap {
+    width:100%; height: 60px;
+    background-color:white;
+    border-bottom:gray solid 1px;
+}
+#headerwrap > div#header {
+    width:600px; height:60px;
+    margin:0 auto;
+    background-color: white;
+    position: relative;
+}
+#header > div#logo {
+    width:103px; height:36px;
+    background-color:white;
+    position:absolute;
+    left:11px; top:12px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 24px;
+
+}
+#header > ul#login {
+    width:136px; height:18px;
+    background-color: white;
+    position: absolute;
+    right:6px; top:21px;
+}
+
+#header > ul#login li {
+    display:block;
+    width: 66px; height:18px;
+    line-height:18px;
+    font-size:14px;
+    float:left;
+    padding-left: 1px;
+    text-align: center;
+}
+#header > ul#login li:first-child {
+    border-right: 1px solid gray;
+}
+/* --------- content 영역 --------- */
+
+#contentwrap {
+    width: 100%; height:729px;
+}
+
+#content {
+    width: 580px; height:729px;
+    margin:0 auto;
+    position: relative;
+    background-color:whitesmoke;
+}
+
+#content h1 {
+    width:580px; height:32px;
+    padding:44px 0 22px;
+    font-size: 28px;
+    line-height:32px;
+    text-align: left;
+    font-weight:400;
+}
+
+#content #person {
+    width:580px; height:289px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+#content #person .guide {
+    border: 1px solid #eee;
+    text-align: center;
+    width:578px; height:182px;
+    background-color: rgb(255, 255, 255);
+    line-height: 182px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+#content #person .btnAction {
+    width:580px; height:54px;
+    background-color:rgb(255, 225, 0);
+    line-height:54px;
+    font-size:15px;
+}
+
+#content #person #snsjoin {
+    width:578px; height:42px;
+    margin-top:7px;
+}
+
+#content #person #snsjoin .sns {
+    float:left;
+    width: 33.333%;
+    height: 42px;
+    font-size:13px;
+    line-height: 42px;
+    background-color: #fff;
+    border:1px solid #eee;
+}
+
+#content #biz {
+    width:580px; height:238px;
+    background-color: whitesmoke;
+}
+
+#content #biz .guide {
+    width:578px; height:182px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    line-height: 182px;
+}
+
+#content #biz .guide strong {
+    font-size:16px;
+}
+
+#content #biz .btnAction {
+    width:580px; height:54px;
+    background-color:#3266cc;
+    line-height: 54px;
+    color: white;
+    font-size: 15px;
+}
+
+#content #proxy {
+    width:578px; height:44px;
+    background-color: blueviolet;
+    margin-top:8px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    line-height: 44px;
+    font-size: 13px;
+}
+
+
+/* --------- footer 영역 --------- */
+
+#footerwrap {
+    width:100%; height:82px;
+}
+
+#footerwrap #footer {
+    width:580px; height:13px;
+    margin:0 auto;
+    line-height: 13px;
+    padding-top: 40px;
+    padding-bottom: 29px;
+    font-size: 11px;
+    text-align: center;
+    color: gray;
+}

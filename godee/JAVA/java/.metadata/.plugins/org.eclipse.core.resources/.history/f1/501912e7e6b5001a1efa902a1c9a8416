@@ -1,0 +1,174 @@
+//package이름이 polymorphismTest입니다.
+package downCastingTest;
+
+import java.util.ArrayList;
+
+import downCastingTestEx.Animal;
+import downCastingTestEx.Eagle;
+import downCastingTestEx.Human;
+import downCastingTestEx.Tiger;
+
+//상퀴 클래스 Animal를 정의합니다.
+
+class Animal {
+	
+	
+	//메서드(맴버 함수를) 정의합니다.
+	
+	public void move() {
+		
+		System.out.println("동물이 움직입니다.");
+		
+	}
+	
+}
+
+//Animal클래스를 상속 받은 Human 클래스를 정의합니다. 
+
+
+class Human extends Animal{
+
+	//Animal 클래스로 부터 물려받은 move() 매소드를 재정의합니다.
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("사람이 두 발로 걷습니다.");
+	}
+	
+	//Human 클래스가 수행하는 readBook()메서드를 정의합니다.
+	public void readBook() {
+		
+		System.out.println("사람이 책을 읽습니다.");
+		
+		
+	}
+	
+
+}
+
+//Animal 클래스로 상속받음 tiger 클래스를 정의합니다.
+
+class Tiger extends Animal{
+	//Animal 클래스로 부터 물려받은 move() 매소드를 재정의합니다.
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("호랑이가 네 발로 뜁니다.");
+	}
+	//tiger 클래스가 수행하는 hunting() 메서드를 정의합니다.
+	
+	public void hunting() {
+	
+		System.out.println("호랑이가 네 발로 뜁니다.");
+	}
+	
+	
+}
+
+//Animal 클래스로 상속받음 Eagle 클래스를 정의합니다.
+
+class Eagle extends Animal{
+	//Animal 클래스로 부터 물려받은 move() 매소드를 재정의합니다.
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("독수리가 하늘을 납니다.");
+	}
+	
+	//tiger 클래스가 수행하는 hunting() 메서드를 정의합니다.
+	public void flying() {
+		// TODO Auto-generated method stub
+		System.out.println("\"독수리가 날개를 쭉 펴고 멀리 날아갑니다.\"");
+	}
+	
+	
+	
+}
+
+//AnimalTest1 class가 정의되었습니다
+public class AnimalTest {
+	
+	//배열의 자료형은 Animal로 지정합니다.
+	ArrayList <Animal> animalList =new ArrayList();
+
+	
+	//main()메소드가 생성되었습니다.
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		AnimalTest animalTest = new AnimalTest();
+		//사람 호랑이 독수리를 추가하는 Addanimal();
+		animalTest.addAnimal();
+		
+		//다운캐스티을 하기 윈한 downCasting() 메서드를 호출합니다.
+		animalTest.downCasting();
+		
+		
+	}
+	//사람 호랑이 독수리를 추가하는 addAnimal()메서드 정의합니다. 
+	public void addAnimal() {
+		//animalList에 객체를 추가합니다.
+		animalList.add(new Human());//제정의가 되있으면 재정이 된쪽으로 안되있으면 원래의 animal로
+		animalList.add(new Tiger());
+		animalList.add(new Eagle());
+		
+		//배열 요소를 Animal 형으로 꺼내서 move 메서드를 호출하면 재정의 된 함수가 호출됩니다..
+		
+	
+		
+		for(Animal animal: animalList) {
+			
+			animal.move();
+		}
+		
+			
+		
+	}
+	//다운 캐스팅을 위한 downCasting()메서드를 호출합니다. 
+	
+	public void downCasting() {
+		//모든 배열 요소를 하나씩 돌면서 Animal
+		for(int i=0; i<animalList.size(); i++) {
+			
+			//Animal 타입으로 가져옵니다.
+			Animal animal=animalList.get(i);
+			
+			
+			if(animal instanceof Human ) {//만약에 Human이라면 
+				//Human 클래스형으로 다운케스팅 합니다.
+				 Human human = (Human)animal ;
+				 
+				 //Human 클래스가 가지고 있는 readBook() 메서드를 호출합니다.
+				 human.readBook();
+				 
+			}else if(animal instanceof Tiger) {//만약에 Tiger라면
+				
+				//Tiger 클래스형으로 다운케스팅합니다.
+				Tiger tiger= (Tiger) animal;
+				
+				//Tiger 클래스가 가지고 있는 hunting() 메서드를 호출합니다.
+				tiger.hunting();
+				
+				
+			}else if(animal instanceof Eagle) {//만약에 Eagle이라면
+				//Eagle 클래스형으로 다운케스팅합니다.
+				Eagle eagle = (Eagle) animal;
+				//Eagle 클래스가 가지고 있는 flying()메서드를 호출합니다
+				eagle.flying();
+				
+			}else{
+				System.out.println("지원되지 않은 형입니다.");
+			}
+			
+		}
+
+
+		
+		
+		
+		
+	}
+	
+	
+
+}

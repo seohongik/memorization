@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow 속성을 이용한 float 해제</title>
+    <style type="text/css">
+        p{
+            border:1px soild red;
+            background:yellow;
+        }
+        img{
+            border: 1px solid blue;
+            padding: 10px;
+        }
+        .imgBox{overflow: hidden;}
+        .imgBox img{ float:left;}
+        
+    </style>
+</head>
+<body>
+    <p class="imgBox">이미지를 왼쪽으로 플로트시키면 부모 요소인 p요소는 텍스트만을 지식 요소로 가지게 됩니다. <img src ="./img/다운로드.jfif" alt="펭수" width="150" height="150">
+    </p>
+    <p class="textBox">플로트를 이용하면 컨텐츠를 이동시키는 것이 가능합니다. 또 플로트는 일반적인 블록박스의 흐름을 벗어나 배치되기 때문에 다른 블록 박스의 배치에 영향을 주게 됩니다 플로트 속성에 지정할 수 있는 값은 left, right, none 등이 있으며 특정 요소가 플로트되면 일반적인 흐름에 따라 배치된 박스 위에 겹쳐서 배치됩니다. 그러나 플로트된 요소와 일반적인 흐름을 따라 배치된 박스의 인라인 텍스트를 겹치지 않고 주변에 배치됩니다.
+    </p>
+</body>
+</html>

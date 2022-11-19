@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 폼 컨트롤</title>
+</head>
+<body>
+    <h1>다양한 폼 컨트롤</h1>
+    <form action="#" method="get"></form>
+        <fieldset>
+            <legend>회원정보</legend>
+            <p>
+                <label for="userId">아이디</label>
+                <input type="text" id="userId" name="userId">
+                <input type="image" src="./images/btnMember.jpg">
+            </p>
+            <p>
+                <label for ="userPwd">비밀번호</label>
+                <input type="password" id="userPwd" name="userPwd">
+            </p>
+            <p>
+                <label for ="userEamil">이메일</label>
+                <input type="text" id="userEamil" title="이메일 아이디 입력">
+                &#64;
+                <input type="text" id="userAccount" title="이메일 계정 입력">
+            </p>
+            <p>
+                성별<br> <!--네임으로 그룹화 서버갈땐 벨류랑 같이 넘어감-->
+                <input type="radio" name="gender" id="man" value ="male">
+                <label for="man">남자</label>
+                <input type="radio" name="gender" id="woman" value ="female">
+                <label for="woman">여자</label>
+            </p> <!--//네임으로 그룹화 서버갈땐 벨류랑 같이 넘어감-->
+            <p>
+                <label for="photo">사진</label>
+                <input type="file" name="photo" id="photo">
+            </p>
+            <p>
+                수신설정<br>
+                <input type="checkbox" name="acceptEmail" id="acceptEmail">
+                <label for="acceptEmail">메일 수신허용</label>
+                <input type="checkbox" name="acceptSMS" id="acceptSMS">
+                <label for="acceptSMS">SMS 수신허용</label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="확인">
+            <input type="reset" value="취소">
+        </p>
+</body>
+</html>

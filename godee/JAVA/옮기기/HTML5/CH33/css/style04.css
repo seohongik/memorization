@@ -1,0 +1,42 @@
+@charset "uft-8";
+
+/* reset */
+*{margin:0; padding:0;}
+ol, ul, li {list-style:none;}
+a {outline:0; text-decoration:none; color:#555;}
+img {vertical-align:top; border:0;}
+
+/*  common */
+body {
+    font:12px/1.6 arial;
+    color:#555;
+}
+
+/* span {
+    font-size: 20px/1.6 verdana;
+    color: lightblue;
+    margin: 50px;
+}
+
+span:nth-child(1) {
+    text-shadow:5px 5px 5px #555;
+}
+
+span:nth-child(2) {
+    text-shadow: -5px -5px 10px #555;
+} */
+
+div {
+    width:300px; height:300px;
+    float:left;
+    margin:50px;
+    background:lightgreen;
+}
+
+div:nth-child(1) {
+    box-shadow: 10px 10px 10px #333;
+}
+
+div:nth-child(2){
+    box-shadow: -10px -10px 20px #333;
+}

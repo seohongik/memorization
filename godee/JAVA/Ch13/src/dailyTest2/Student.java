@@ -1,0 +1,78 @@
+//package가 dailyTest입니다.
+package dailyTest2;
+
+import java.util.ArrayList;
+
+//class가 Student입니다.
+public class Student {
+	
+	
+	//필드(멤버변수)를 정의합니다
+	
+	private int serialNum;						//학번 //static을 구지 쓸 필요없음
+	private	String studentName;					//학생이름
+	private	ArrayList<Subject> subjectList;
+	
+	
+	
+	//매개변수가 있는 생성자
+
+	public Student(int serialNum, String studentName) {
+		this.serialNum = serialNum;
+		this.studentName = studentName;//수강 과목 목록
+		subjectList =new ArrayList<Subject>();
+		
+		
+	}	
+	
+	//학생이 수강하는 과목을 subjectList 배열에 하나씩 추가하는 메서드를 정의합니다.
+	public void addSubject(String name,int score) {
+		//과목을 생성합니다.
+		Subject subject=new Subject();
+		//과목 이름을 추가합니다.
+		subject.setName(name);
+		//수강하는 과목 목록에 추가 합니다.
+		subject.setScore(score);
+		subjectList.add(subject);
+	
+		
+	
+	}
+	
+	public void showStudentInfo() {
+	
+		int total=0;
+		
+	/*for(int i=0; i<subjectList.size(); i++) {
+		
+		
+	}*/
+		/*
+		학생 ""의 수학 과목성석은 ""점입니다.
+		
+		학생 ""의 수학 과목 성적은 ""점 입니다.
+		
+		학샐 ""의 총점은 ""점 입니다.
+		*/
+		for(Subject s: subjectList) {
+			
+			total+=s.getScore();
+			
+			
+			System.out.println("학생"+studentName+"의"+s.getName()+"과목성적은"+s.getScore());	
+		}
+		System.out.println("학생"+studentName+"총점은"+total+"입니다.");
+		
+		
+		
+		
+	}
+
+
+
+
+
+	
+	
+
+}

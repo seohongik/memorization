@@ -1,0 +1,9 @@
+div.list h2 {
+    font-size:30px;
+    color:blue;
+}
+
+
+div.list ul li a:hover {
+    color:powderblue;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-31</title>
+    <script>
+
+        /*
+            경품 추첨기
+            수를 입력받아 이 값이
+            1이면 '당첨! 냉장고',
+            2이면 '당첨! 세탁기',
+            3이면 '당첨! TV',
+            이외의 경우는 모드 '꽝입니다.'를
+            출력해주세요.
+        */
+
+        var luckyValue = window.prompt("행운의 번호를 고르세요.", "0");
+        luckyValue = parseInt(luckyValue);
+        switch(luckyValue){
+            case 1 : 
+                document.write("당첨! 냉장고<br>");
+                break;
+            case 2 :
+                document.write("당첨! 세탁기<br>");
+                break;
+            case 3 :
+                document.write("당첨! TV <br>");
+                break;
+            default :
+                document.write("꽝입니다. <br>");
+                break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

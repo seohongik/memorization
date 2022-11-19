@@ -1,0 +1,16 @@
+class Calc {
+	
+}
+
+public class CalcTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] num = {10};
+	}
+	
+	static void change(int[] num) {
+		num[0] = 100;
+		System.out.println(num[0]);
+	}
+}
