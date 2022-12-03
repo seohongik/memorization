@@ -1,23 +1,21 @@
 package com.fastcampus.jpa.bookmanager.repository;
 
+
 import com.fastcampus.jpa.bookmanager.domain.Member;
+import org.assertj.core.util.Arrays;
 import org.assertj.core.util.Lists;
-import org.hibernate.annotations.Loader;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.data.domain.*;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.PostLoad;
-import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.time.LocalDateTime;
 
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.contains;
-import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.endsWith;
 
 @SpringBootTest
 class MemberRepositoryTest {
@@ -139,6 +137,59 @@ class MemberRepositoryTest {
         Example<Member> exampleMatcher = Example.of(member, matcher);
 
         memberRepository.findAll(exampleMatcher).forEach(System.out::println);
+
+    }
+
+    @Test
+    public void select(){
+
+        //System.out.println("findByName::::::"+memberRepository.findByName("martine"));
+
+        /*System.out.println("findByEmail::::::"+memberRepository.findByEmail("martine@fastcampus.com"));
+        System.out.println("getByEmail::::::"+memberRepository.getByEmail("martine@fastcampus.com"));
+        System.out.println("getByEmail::::::"+memberRepository.searchByEmail("martine@fastcampus.com"));
+        System.out.println("readByEmail::::::"+memberRepository.readByEmail("martine@fastcampus.com"));
+        System.out.println("streamByEmail::::::"+memberRepository.streamByEmail("martine@fastcampus.com"));
+        System.out.println("queryByEmail::::::"+memberRepository.queryByEmail("martine@fastcampus.com"));
+        System.out.println("findMemberByEmail::::::"+memberRepository.findMemberByEmail("martine@fastcampus.com"));
+        */
+
+        /*System.out.println("findFirst1ByName::::::"+memberRepository.findFirst1ByName("martine"));
+        System.out.println("findTop1ByName::::::"+memberRepository.findTop1ByName("martine"));
+
+        //2개 리턴 리미트 조건 빠짐 인식하지 않는 메소드는 무시하게 된다.
+        System.out.println("findLast1ByName::::::"+memberRepository.findLast1ByName("martine"));*/
+
+        /*System.out.println("findByEmailAndName::::::"+memberRepository.findByEmailAndName("martine@fastcampus.com", "martine"));
+        System.out.println("findByEmailOrName::::::"+memberRepository.findByEmailOrName("martine@fastcampus.com", "martine"));
+        */
+
+        //System.out.println("findByCreatedAtAfter::::::"+memberRepository.findByCreatedAtAfter(LocalDateTime.now().minusDays(1L)));
+        //System.out.println("findByIdAfter::::::"+memberRepository.findByIdAfter(4L));
+        /*System.out.println("findByCreatedAtGreaterThan::::::"+memberRepository.findByCreatedAtGreaterThan(LocalDateTime.now().minusDays(1L)));
+        System.out.println("findByCreatedAtGreaterThanEqual::::::"+memberRepository.findByCreatedAtGreaterThanEqual(LocalDateTime.now().minusDays(1L)));
+        */
+
+        /*System.out.println("findByCreatedAtBetween::::::"+
+                memberRepository.findByCreatedAtBetween(LocalDateTime.now().minusDays(1L),LocalDateTime.now().plusDays(1L)));
+        System.out.println("findByIdBetween::::::"+memberRepository.findByIdBetween(2L,5L));
+      */
+
+        //System.out.println("findByIdIsNotNull::::::"+memberRepository.findByIdIsNotNull());
+
+        /**문자열의 not empty 가아니라 컬렉션의 not empty를 말함 문자열 아님에 주의*/
+        //System.out.println("findByAddressesIsNotEmpty::::::"+memberRepository.findByAddressesIsNotEmpty());
+
+
+        //System.out.println("findByNameIn::::::"+memberRepository.findByNameIn(Lists.newArrayList("martine", "sophia")));
+
+
+       /* System.out.println("findByNameStartingWith::::::"+memberRepository.findByNameStartingWith("ma"));
+        System.out.println("findByNameEndingWith::::::"+memberRepository.findByNameEndingWith("pia"));
+        System.out.println("findByNameContaining::::::"+memberRepository.findByNameContaining("ma"));
+        System.out.println("findByNameLike::::::"+memberRepository.findByNameLike("%"+"ma"+"%"));*/
+
+
 
     }
 }

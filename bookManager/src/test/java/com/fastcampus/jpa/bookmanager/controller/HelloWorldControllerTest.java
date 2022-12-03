@@ -39,7 +39,6 @@ class HelloWorldControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("helloWorld"));
 
-
     }
 
 }
