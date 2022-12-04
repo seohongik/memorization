@@ -1,16 +1,14 @@
 package com.fastcampus.jpa.bookmanager.repository;
 
 
+import com.fastcampus.jpa.bookmanager.domain.Gender;
 import com.fastcampus.jpa.bookmanager.domain.Member;
 import org.assertj.core.util.Arrays;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.*;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
@@ -24,7 +22,7 @@ class MemberRepositoryTest {
     MemberRepository memberRepository;
 
     @Test
-    public void crud(){
+    public void crud() {
 
         //memberRepository.save(new Member());
         //memberRepository.findAll().stream().forEach(System.out::println);
@@ -51,7 +49,7 @@ class MemberRepositoryTest {
 
     @Test
     @Transactional
-    public void getOne(){
+    public void getOne() {
 
         //getone은 lazy패치 이며 	@Deprecated 되었다. @Transactional을 붙여야 동작
         Member member = memberRepository.getOne(1l);
@@ -59,25 +57,25 @@ class MemberRepositoryTest {
     }
 
     @Test
-    public void getById(){
+    public void getById() {
 
         Member member = memberRepository.findById(1l).orElse(null);
         System.out.println(member);
     }
 
     @Test
-    public void flush(){
+    public void flush() {
         //flush는 쿼리에 반영이 아니라 DB반영시점과 관련이 있다
-       memberRepository.save(new Member("newMartin", "newMartin@fastcampus.com"));
-       memberRepository.flush();
-       memberRepository.findAll().forEach(System.out::println);
+        memberRepository.save(new Member("newMartin", "newMartin@fastcampus.com"));
+        memberRepository.flush();
+        memberRepository.findAll().forEach(System.out::println);
 
     }
 
     @Test
-    public void count(){
+    public void count() {
         //count도 existsById도 카운트 쿼리를 사용한다.
-        long count=memberRepository.count();
+        long count = memberRepository.count();
         System.out.println(count);
 
         boolean exists = memberRepository.existsById(1l);
@@ -85,7 +83,7 @@ class MemberRepositoryTest {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
 
         memberRepository.delete(memberRepository.findById(1l).orElseThrow(RuntimeException::new));
 
@@ -95,15 +93,15 @@ class MemberRepositoryTest {
     }
 
     @Test
-    public void deleteAll(){
+    public void deleteAll() {
 
-       //memberRepository.deleteAll(); //전체 삭제 //포루프 돌면서 하나씩 삭제
-        memberRepository.deleteAll(memberRepository.findAllById(Lists.newArrayList(1L,3L))); // 아이디 찾아서 삭제
+        //memberRepository.deleteAll(); //전체 삭제 //포루프 돌면서 하나씩 삭제
+        memberRepository.deleteAll(memberRepository.findAllById(Lists.newArrayList(1L, 3L))); // 아이디 찾아서 삭제
         memberRepository.findAll().stream().forEach(System.out::println);
     }
 
     @Test
-    public void deleteInBatch(){
+    public void deleteInBatch() {
 
         memberRepository.deleteAllInBatch(); //전체 삭제 // where 조건 없음
         //memberRepository.deleteInBatch(memberRepository.findAllById(Lists.newArrayList(1L,3L))); // 아이디 찾아서 삭제
@@ -111,29 +109,29 @@ class MemberRepositoryTest {
     }
 
     @Test
-    public void paging(){
+    public void paging() {
 
-        Page<Member> memberPage = memberRepository.findAll(PageRequest.of(0,3)); //page는 zerobase = 0이 실질상 1페이지
+        Page<Member> memberPage = memberRepository.findAll(PageRequest.of(0, 3)); //page는 zerobase = 0이 실질상 1페이지
 
-        System.out.println("page::"+memberPage);
-        System.out.println("totalElements::"+memberPage.getTotalElements());
-        System.out.println("totalPages::"+memberPage.getTotalPages());
-        System.out.println("numberOfElements::"+memberPage.getNumberOfElements());
-        System.out.println("sort::"+memberPage.getSort());
-        System.out.println("size ::"+memberPage.getSize());
+        System.out.println("page::" + memberPage);
+        System.out.println("totalElements::" + memberPage.getTotalElements());
+        System.out.println("totalPages::" + memberPage.getTotalPages());
+        System.out.println("numberOfElements::" + memberPage.getNumberOfElements());
+        System.out.println("sort::" + memberPage.getSort());
+        System.out.println("size ::" + memberPage.getSize());
 
         memberPage.getContent().forEach(System.out::println);
     }
 
     @Test
-    public void queryByExample(){
+    public void queryByExample() {
 
         Member member = new Member();
         member.setEmail("slowcampus");
 
         ExampleMatcher matcher = ExampleMatcher.matching()
                 .withIgnorePaths("id")
-                .withMatcher("email",contains());
+                .withMatcher("email", contains());
         Example<Member> exampleMatcher = Example.of(member, matcher);
 
         memberRepository.findAll(exampleMatcher).forEach(System.out::println);
@@ -141,7 +139,7 @@ class MemberRepositoryTest {
     }
 
     @Test
-    public void select(){
+    public void select() {
 
         //System.out.println("findByName::::::"+memberRepository.findByName("martine"));
 
@@ -189,6 +187,62 @@ class MemberRepositoryTest {
         System.out.println("findByNameContaining::::::"+memberRepository.findByNameContaining("ma"));
         System.out.println("findByNameLike::::::"+memberRepository.findByNameLike("%"+"ma"+"%"));*/
 
+    }
+
+    @Test
+    void pagingAndSorting() {
+
+       /* System.out.println("findTop1ByName::::::" + memberRepository.findTop1ByName("martine"));
+        System.out.println("findLast1ByName::::::" + memberRepository.findLast1ByName("martine"));
+        System.out.println("findTop1ByNameOrderByIdDesc::::::" + memberRepository.findTop1ByNameOrderByIdDesc("martine"));
+        System.out.println("findFirstByNameOrderByIdDescEmailAsc::::::" + memberRepository.findFirstByNameOrderByIdDescEmailAsc("martine"));
+        System.out.println("findFirstByNameWithSortParam::::::" + memberRepository.findFirstByName("martine", Sort.by(Sort.Order.desc("id"), Sort.Order.asc("email"))));
+        */
+
+        //page 디폴트 0 => 첫번째 인자 시작은 0
+       /* System.out.println("findByNameWithPage::::::" + memberRepository.findByName("martine", PageRequest.of(0, 1, Sort.by(Sort.Order.desc("id")))).getContent());
+        System.out.println("findByNameWithPage::::::" + memberRepository.findByName("martine", PageRequest.of(1, 1, Sort.by(Sort.Order.desc("id")))).getContent());
+       */
+    }
+
+    @Test
+    void insertAndUpdate(){
+
+        /*Member member = new Member();
+
+        member.setName("martine");
+        member.setEmail("martine2@fastcampus.com");
+
+        memberRepository.save(member);
+        Member member2 =memberRepository.findById(1L).orElseThrow(RuntimeException::new);
+
+        member2.setName("marrrrrrrrrrrtine");
+        memberRepository.save(member2);*/
+    }
+
+    @Test
+    void enumTest(){
+
+        /*Member member = memberRepository.findById(1L).orElseThrow(RuntimeException::new);
+        member.setGender(Gender.FEMALE);
+        memberRepository.save(member);
+        memberRepository.findAll().forEach(System.out::println);
+        System.out.println(memberRepository.findRowRecord().get("gender")); // 결과 0*/
+
+
+        /*Member member = memberRepository.findById(1L).orElseThrow(RuntimeException::new);
+        member.setGender(Gender.FEMALE);
+        memberRepository.save(member);
+        memberRepository.findAll().forEach(System.out::println);
+        System.out.println(memberRepository.findRowRecord().get("gender")); // 결과 1*/
+
+        /***=> @Enumerated 의 default value 는 ordinary 즉 zero base 0 부터 시작 , 코드를 수정해야한다면 순서성 때문에 value = String **/
+
+        Member member = memberRepository.findById(1L).orElseThrow(RuntimeException::new);
+        member.setGender(Gender.FEMALE);
+        memberRepository.save(member);
+        memberRepository.findAll().forEach(System.out::println);
+        System.out.println(memberRepository.findRowRecord().get("gender"));
 
 
     }

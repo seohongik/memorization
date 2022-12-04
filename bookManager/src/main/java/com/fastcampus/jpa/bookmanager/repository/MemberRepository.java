@@ -1,10 +1,16 @@
 package com.fastcampus.jpa.bookmanager.repository;
 import com.fastcampus.jpa.bookmanager.domain.Address;
 import com.fastcampus.jpa.bookmanager.domain.Member;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -53,6 +59,17 @@ public interface MemberRepository extends JpaRepository<Member,Long> {
     List<Member> findByNameEndingWith(String name);
     List<Member> findByNameContaining(String name);
     List<Member> findByNameLike(String name);
+
+
+    List<Member> findTop1ByNameOrderByIdDesc(String name);
+
+    List<Member> findFirstByNameOrderByIdDescEmailAsc(String name);
+    List<Member> findFirstByName(String name, Sort sort);
+
+    Page<Member> findByName(String name, Pageable pageable);
+
+    @Query(value = "select * from member limit 1;", nativeQuery = true)
+    Map<String, Object> findRowRecord();
 
 
 }
