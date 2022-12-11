@@ -39,6 +39,8 @@ obj.arr = 'str' /* obj.arr 데이터 영역에 str 저장 후 (str이 데이터 
 
 
 
+
+
 /* 변수 복사 그리고 이후 값 변경 결과 비교*/
 var a  = 10;  /*주소 1000 확보후 데이터 영역 주소 값(@5000)에 10 참조 */
 var b = a; /* a와 서로 다른 주소 1001 확보 후 데이터 공간에 10(@5000)이 있으니 @5000 들고 와서 주소 1001에 참조 */
@@ -320,6 +322,90 @@ obj2 = {
         d:[1,2],
     }
 };
+*/
+
+
+/* undefined 와 null */
+
+// 자바스크립트에 없음 을 나타내는 값 두가지 undefined null 
+/*
+
+undefined 사용자가 지정
+값이 존재하지 않을때 자바스크립트 엔진이 자동으로 부여
+사용자가 응당 어떤 값을 지정할 것이라고 예상되는 상황에도 그렇게 하지 않았을 때 
+
+1. 값을 데입하지 않은 변수 , 즉 데이터 영역의 메모리에 주소를 지정하지 않은 식별자에 접근
+2. 객체 내부에 존재하지 않은 프로퍼티에 접근할려고 할 때 
+3. return 문이 없거나 호출 되지 않은 함수의 실행 결과
+
+*/
+
+var a;
+console.log(a); // (1) undefinded 값을 대입하지 않은 변수
+
+var obj  = {a:4};
+
+console.log(obj.a); // 4
+console.log(obj.b); // (2) undefinded 객체 내부에 존재하지 않은 프로퍼티에 접근
+console.log(b); // c.f) ReferenceError : b is not defined
+
+var func = function(){} 
+var c = func(); // (3) 반환(return) 값이 없으면 undefined를 반환한 것으로 간주
+console.log(c); //(3) undefinded 
+
+
+/* undefined와 배열 */
+var arr1 = [];
+arr1.length =3;
+
+console.log(arr1); //[empty x 3]
+
+var arr2 = new Array(3); 
+console.log(arr2); //[empty x 3]
+
+var arr3 = [undefined,undefined,undefined];
+console.log(arr3) // [undefined,undefined,undefined]
+
+//-> 배열에서 비어있는 요소와 'undefined를 할당한 요소'는 출력 결과 부터 다르다. '비어 있는 요소'는 순회와 관련된 많은 배열 메서드의 순회대상에서 제외
+
+/* 빈 요소와 배열의 순회 (나중에 다시 보기)*/
+var arr1=[undefined,1]
+var arr2=[];
+arr2[1] = 1;
+
+arr1.forEach(function(v,i){console.log(v,i); }); //undefined 0 / 1 1
+arr2.forEach(function(v,i){console.log(v,i); }); // 1 1
+
+arr1.map(function(v,i){return v+i;}); //[NaN,2]
+arr2.map(function(v,i){return v+i;}); //[emtpy,2]
+
+arr1.filter(function(v){return !v;}); // [undefined]
+arr2.filter(function(v){return !v;}); // []
+
+arr1.reduce(function(p,c,i){ return p+c+i;  },''); //undefined011
+arr2.reduce(function(p,c,i){ return p+c+i;  },''); //11
+
+//-> 값으로 어딘가에 할당한 undefined는 실존하는 데이터인 반면 자바스크립트 엔진이 반환해주는 undefined는 문자 그대로 값이 없음을 나타냄
+// 둘 중 하나를 사용하지 않으면 된다 undefined를 할당 하지 않으면 혼란을 피할수 있다.
+
+// 비어있음을 으로다저긍로 나타내고 싶을 때는 undefined 대신에 null을 쓰면 된다
+// typeof null이 object 라는 점을 주의
+
+
+/*undefined와 null의 비교*/
+
+var n = null;
+console.log(typeof n); // object
+
+console.log(n==undefined) //true;
+console.log(n==null) //true;
+
+console.log(n===undefined) //false;
+console.log(n===null) //true
+/*
+==동등 연산자 ===일치 연산자
+동등 연산자로 비교할 경우 null인지 아니면  undefined인지 판별 불가 
+일치 연산자를 써야만 정확히 판단 가능 
 */
 
 
