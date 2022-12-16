@@ -58,4 +58,6 @@ public class Member {
     //@OneToMany(fetch = FetchType.EAGER)
     //private List<Address> addresses;
 
+
+
 }

@@ -4,8 +4,10 @@ class Main{
 
     public static void main(String[] args) {
 
-        HarshadNumber harshadNumber = new HarshadNumber();
+        Hamburger hamburger = new Hamburger();
 
-        System.out.println(harshadNumber.solution(1211));
+        int[] ingredient = new int[]{2, 1, 1, 2, 3, 1, 2, 3, 1};
+        hamburger.solution(ingredient);
+
     }
 }
