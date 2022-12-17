@@ -1,8 +1,0 @@
-@charset "utf-8";
-*{margin: 0; padding: 0;}
-ol,ul,li{list-style: none;}
-a{outline: 0; text-decoration: none; color: #555;}
-img{border:0; vertical-align: top;}
-body{font:12px/1.6 arial; color: #555;}
-body{height:3000px;}
-p{font-size: 30px; position: fixed; left: 0; top:0;}
