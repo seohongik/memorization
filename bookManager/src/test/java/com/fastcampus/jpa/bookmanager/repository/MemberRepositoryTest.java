@@ -3,7 +3,6 @@ package com.fastcampus.jpa.bookmanager.repository;
 
 import com.fastcampus.jpa.bookmanager.domain.Gender;
 import com.fastcampus.jpa.bookmanager.domain.Member;
-import org.assertj.core.util.Arrays;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.*;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.contains;
 
@@ -20,6 +18,9 @@ class MemberRepositoryTest {
 
     @Autowired
     MemberRepository memberRepository;
+
+    @Autowired
+    MemberHistoryRepository memberHistoryRepository;
 
     @Test
     public void crud() {
@@ -244,6 +245,70 @@ class MemberRepositoryTest {
         memberRepository.findAll().forEach(System.out::println);
         System.out.println(memberRepository.findRowRecord().get("gender"));
 
+
+    }
+
+    @Test
+    void listenerTest(){
+
+        Member member = new Member();
+
+        member.setEmail("martine2@fastcampus.com");
+        member.setName("martine2");
+
+        memberRepository.save(member);
+
+        Member member1 = memberRepository.findById(1L).orElseThrow(RuntimeException::new);
+        member1.setName("marrrr");
+
+        memberRepository.save(member1);
+
+        memberRepository.deleteById(4L);
+    }
+
+    @Test
+    void prePersistTest(){
+
+        Member member = new Member();
+        member.setEmail("martine2@fastcampus.com");
+        member.setName("martine");
+
+       // member.setCreatedAt(LocalDateTime.now()); //@prePersist 에 코딩
+       // member.setUpdatedAt(LocalDateTime.now());
+
+        memberRepository.save(member);
+
+        System.out.println(memberRepository.findByEmail("martine2@fastcampus.com"));
+    }
+
+    @Test
+    void preUpdatedTest(){
+
+        Member member = memberRepository.findById(1L).orElseThrow(RuntimeException::new);
+
+        System.out.println("as-is : "+member);
+
+        member.setName("marrrtine22");
+        member.setEmail("martine2@fastcampus.com");
+
+        memberRepository.save(member);
+
+        System.out.println("to-be :" +memberRepository.findAll().get(0));
+
+
+        System.out.println(memberRepository.findByEmail("martine2@fastcampus.com"));
+    }
+
+    @Test
+    void memberHistoryTest(){
+
+        Member member = new Member();
+        member.setName("jeriocho8901");
+        member.setEmail("jeriocho8901@fastcampus.com");
+        memberRepository.save(member);
+        member.setEmail("jeriocho8901Update@fastcampus.com");
+        memberRepository.save(member);
+        memberHistoryRepository.findAll().forEach(System.out::println);
 
     }
 }
