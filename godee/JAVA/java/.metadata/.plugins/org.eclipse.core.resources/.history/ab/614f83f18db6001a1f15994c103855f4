@@ -1,5 +1,0 @@
-package gameTest;
-
-public abstract class PlayerLevel {
-
-}

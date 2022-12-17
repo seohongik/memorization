@@ -1,5 +1,0 @@
-package abstractTest;
-
-public abstract class Car {
-
-}

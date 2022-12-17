@@ -1,5 +1,0 @@
-package interfaceTest;
-
-public interface Calc {
-
-}
