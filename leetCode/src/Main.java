@@ -1,17 +1,20 @@
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Map;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.*;
 
 class Main{
 
     public static void main(String[] args) {
 
-        LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
 
-        Map<String, Map<String, Integer>> map = lengthOfLongestSubstring.lengthOfLongestSubstring("acdd");
-
+      Trio trio= new Trio();
 
 
+      trio.solution(null);
 
     }
+
 }
+

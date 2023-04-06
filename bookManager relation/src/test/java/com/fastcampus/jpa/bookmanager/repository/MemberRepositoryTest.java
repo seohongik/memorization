@@ -3,6 +3,7 @@ package com.fastcampus.jpa.bookmanager.repository;
 
 import com.fastcampus.jpa.bookmanager.domain.Gender;
 import com.fastcampus.jpa.bookmanager.domain.Member;
+import com.fastcampus.jpa.bookmanager.domain.MemberHistory;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,11 @@ import org.springframework.data.domain.*;
 import org.springframework.transaction.annotation.Transactional;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.contains;
+import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.storeDefaultMatching;
 
 @SpringBootTest
 class MemberRepositoryTest {
@@ -243,7 +248,7 @@ class MemberRepositoryTest {
         member.setGender(Gender.FEMALE);
         memberRepository.save(member);
         memberRepository.findAll().forEach(System.out::println);
-        System.out.println(memberRepository.findRowRecord().get("gender"));
+       // System.out.println(memberRepository.findRowRecord().get("gender"));
 
 
     }
@@ -309,6 +314,26 @@ class MemberRepositoryTest {
         member.setEmail("jeriocho8901Update@fastcampus.com");
         memberRepository.save(member);
         memberHistoryRepository.findAll().forEach(System.out::println);
+
+    }
+
+    @Test
+    void memberRelationTest(){
+
+        Member member = new Member();
+
+        member.setName("david");
+        member.setEmail("david@fastcampus.com");
+        member.setGender(Gender.MALE);
+        memberRepository.save(member);
+        member.setName("daniel");
+        memberRepository.save(member);
+        member.setEmail("daniel@fastcampus.com");
+        memberRepository.save(member);
+        List<MemberHistory> result = memberRepository.findByEmail("daniel@fastcampus.com").getMemberHistories();
+       //System.out.println(result);
+
+        System.out.println("memberHistoryRepository.getMember"+memberHistoryRepository.findAll().get(0).getMember());
 
     }
 }

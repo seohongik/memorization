@@ -10,11 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.EntityListeners;
-import javax.persistence.PostUpdate;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 //@Component
 public class MemberEntityListener  {
@@ -42,19 +40,22 @@ public class MemberEntityListener  {
 
     }*/
 
-    @PrePersist
-    @PreUpdate
+ /*   @PrePersist
+    @PreUpdate*/
+    @PostPersist
+    @PostUpdate
     public void preMemberInsertAndUpdate(Object obj) {
 
         MemberHistoryRepository memberHistoryRepository = BeanUtils.getBean(MemberHistoryRepository.class);
 
-        if(obj instanceof Member) {
-            Member member = (Member) obj;
+        if(obj instanceof Member){
 
+            Member member = (Member) obj;
             MemberHistory memberHistory = new MemberHistory();
-            memberHistory.setMemberId(member.getId());
-            memberHistory.setEmail(member.getName());
+            /*memberHistory.setMemberId(member.getId());*/
+            memberHistory.setEmail(member.getEmail());
             memberHistory.setName(member.getName());
+            memberHistory.setMember(member);
 
             memberHistoryRepository.save(memberHistory);
         }

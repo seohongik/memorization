@@ -68,8 +68,8 @@ public interface MemberRepository extends JpaRepository<Member,Long> {
 
     Page<Member> findByName(String name, Pageable pageable);
 
-    @Query(value = "select * from member limit 1;", nativeQuery = true)
-    Map<String, Object> findRowRecord();
+   /* @Query(value = "select * from member limit 1;", nativeQuery = true)
+    Map<String, Object> findRowRecord();*/
 
 
 }

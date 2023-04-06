@@ -9,6 +9,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -31,6 +33,7 @@ public class Book extends BaseEntity /*implements Auditable*/ {
 
     private Long authorId;
 
+    @Column(name = "publisher_id", updatable = false, insertable = false)
     private Long publisherId;
 
     private String author;
@@ -38,5 +41,14 @@ public class Book extends BaseEntity /*implements Auditable*/ {
     @OneToOne( mappedBy = "book")
     @ToString.Exclude
     private BookReviewInfo bookReviewInfo;
+
+    @OneToMany
+    @JoinColumn(name = "book_id")
+    @ToString.Exclude
+    private List<Review> reviewList = new ArrayList<>();
+
+    @ManyToOne
+    @ToString.Exclude
+    private Publisher publisher;
 
 }
