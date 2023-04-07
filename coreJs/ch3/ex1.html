@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>\
+    <title>Document</title>
     <script>
 
-setTimeout(function(){console.log(this)},300); //window {}
 
-[1,2,3,4,5].forEach(function(x){
-    console.log(this,x); //window 1 window 2...
-});
+var report={
 
-document.body.innerHTML +='<button id="a">클릭</button>';
-document.body.querySelector('#a').addEventListener('click',function(e){
-    console.log(this,e); // '<button id="a">클릭</button>'...
-});
+sum:0,
+count:0,
+add: function(){
+    var args = Array.prototype.slice.call(arguments);
+
+    args.forEach(function(enrty){
+
+        this.sum +=enrty;
+        ++this.count;
+
+    },report);
+
+},
+
+average: function(){
+    return this.sum/this.count;
+}
+
+}
+
+report.add(60,85,95);
+
+console.log(report.sum, report.count, report.average())
+
+
 
     </script>
 </head>
