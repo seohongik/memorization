@@ -1,7 +1,10 @@
-import java.time.*;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -37,7 +40,7 @@ public class Main {
         LocalDateTime todayDate = LocalDateTime.now(ZoneId.of("Asia/Seoul"));
         LocalDateTime finishedDate = LocalDateTime.now(ZoneId.of("Asia/Seoul")).of(2024, 3, 30, 0, 0, 0);
 
-        System.out.println("d_day ::::"+ChronoUnit.DAYS.between(todayDate,finishedDate));
+        System.out.println("d_day ::::"+ ChronoUnit.DAYS.between(todayDate,finishedDate));
 
 
         int sum = maxList.stream().mapToInt(i -> i).sum();
@@ -46,7 +49,6 @@ public class Main {
         int calc_day = 0;
 
         for (int i = 0; i < backList.size()-length; i++) {
-
 
             System.out.println("번호 ::"+(i+1));
 
