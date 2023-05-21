@@ -575,4 +575,3 @@ var getInformation = function(baseUrl){
 
 //fetch 함수는 url을 받아 해당 url에 HTTP 요청을 함
 // 매번 baseUrl기입 하기 보다 공통 요소(id 제외 )는 먼저 기억시켜두고 특정 값 (id)만으로 서버요청하는게 효율 가독 성 측면에더 좋음
-

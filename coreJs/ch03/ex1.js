@@ -181,7 +181,7 @@ document.body.querySelector('#id').addEventListener('click',function(e){
 /*생성자의 this==>(new 명령어와 함께 함수를 호출) 하면 prototype 프로퍼티를 참조하는 __proto__라는 프로퍼티가 있는 객체(인스턴스)를 만들고 , 
  미리 준비된 공총 속성 및 개성을 해당 객체(this)dp qndu 
  
- 객체지향의 this란 으미
+ 객체지향의 this란 의미
 */
 
 var Cat = function(name,age){

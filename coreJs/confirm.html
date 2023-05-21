@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
 
+var Grade = function(){
+
+var args = Array.prototype.slice.call(arguments);
+
+for( var i =0; i<args.length; i++){
+
+    this[i]=args[i];
+}
+
+this.length = args.length;
+
+
+}
+Grade.prototype = [];
+
+var g = new Grade(100,80);
+
+
+
+g.push(10);
+
+console.log(g);
+
+
+</script>
 <body>
     
 
 
 </body>
 
-<script>
 
-
-</script>
 </html>
