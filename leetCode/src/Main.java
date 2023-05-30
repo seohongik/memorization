@@ -10,9 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RunRunRun runRunRun = new RunRunRun();
+        StringDesc str = new StringDesc();
 
-        runRunRun.solution(null,null);
+        str.solution("Zbcdefg");
     }
 
 }

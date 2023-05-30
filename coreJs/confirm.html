@@ -7,29 +7,75 @@
     <title>Document</title>
 </head>
 <script>
+/** super 까지 구현 [나중에 다시 보기 ] */
+var extendClass = function(SuperClass, SubClass, subMethods){
 
-var Grade = function(){
+SubClass.prototype = Object.create(SuperClass.prototype);
+SubClass.prototype.constructor = SubClass;
 
-var args = Array.prototype.slice.call(arguments);
+///// 추가된 부분 [S]
+SubClass.prototype.super = function(propName){
 
-for( var i =0; i<args.length; i++){
+    var self = this;
 
-    this[i]=args[i];
+    if(!propName) {
+
+        return function(){
+            SuperClass.apply(self, arguments);
+        };
+    }
+
+    var prop = SuperClass.prototype[propName];
+
+    if(typeof prop !== 'function') {
+
+        return prop;
+    }
+    return function(){
+        return   prop.apply(self, arguments);
+    };
+};
+
+///// 추가된 부분 [E]
+if(subMethods){
+    for(var method in subMethods){
+
+        SubClass.prototype[method] = subMethods[method];
+    }
+
 }
 
-this.length = args.length;
+Object.freeze(SubClass.proptotype);
+return SubClass;
+};
 
-
+var Rectangle = function(width,height){
+this.width = width;
+this.height = height;
 }
-Grade.prototype = [];
 
-var g = new Grade(100,80);
+Rectangle.prototype.getArea = function(){
+return this.width * this.height;
+}
 
+var Square = extendClass(
 
+Rectangle, 
+function(width){
+    this.super()(width, width); //super 사용(1)
+}, {
+    getArea : function(){
+        console.log('size is ::' , this.super('getArea')()); //super 사용 (2)
+    }
+}
 
-g.push(10);
+);
 
-console.log(g);
+var sq = new Square(10);
+
+sq.getArea();
+
+console.log(sq.super('getArea')());
 
 
 </script>
